@@ -1,4 +1,4 @@
-*经典24管D触发器的网表文件 
+*新24管D触发器的网表文件 
 
 *反相器 
 .subckt INV_D  IN VDD VNW VPW VSS OUT

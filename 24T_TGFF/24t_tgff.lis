@@ -63,11 +63,11 @@
  ***** operating point status is voltage   simulation time is     0.     
      node    =voltage       node    =voltage       node    =voltage
 
- + 0:1       =   1.1000   0:2       =   1.1000   0:3       =   8.3019u
- + 0:4       =   1.1000   0:5       = 565.1546m  0:6       = 565.1470m
- + 0:7       = 565.1686m  0:cki     =   6.4776u  0:ckn     =   1.1000 
+ + 0:1       =   1.1000   0:2       =   1.1000   0:3       =   7.4500u
+ + 0:4       =   1.1000   0:5       = 565.1542m  0:6       = 565.1501m
+ + 0:7       = 565.1620m  0:cki     =   6.4788u  0:ckn     =   1.1000 
  + 0:clk     =   0.       0:d       =   4.6119u  0:in      =   0.     
- + 0:q       = 565.2068m  0:test_1  =   1.1000   0:vdd     =   1.1000 
+ + 0:q       = 565.1823m  0:test_1  =   1.1000   0:vdd     =   1.1000 
  + 0:vnw     =   1.1000   0:vpw     =   0.       0:vss     =   0.     
 
 
@@ -101,18 +101,18 @@
 
   analysis           time    # points   tot. iter  conv.iter
   op point           0.02           1           9
-  transient          0.87       60001       10843        3995 rev=       390
-  readin             0.08
+  transient          0.86       60001       10853        3986 rev=       406
+  readin             0.10
   errchk             0.02
-  setup              0.02
+  setup              0.03
   output             0.00
 
 
            total memory used          676  kbytes
-           total cpu time            1.04 seconds
-           total elapsed time        1.12 seconds
-           job started at     23:09:53 05/23/2020
-           job ended   at     23:09:54 05/23/2020
+           total cpu time            1.06 seconds
+           total elapsed time        1.15 seconds
+           job started at     01:01:00 05/24/2020
+           job ended   at     01:01:01 05/24/2020
 
 
   lic: Release hspice token(s) 

@@ -11,8 +11,10 @@ XN1  VSS  IN  OUT    VPW  n11ll_ckt                     W=1.0e-07    L=4e-08
 *传输门 PCON是PMOS的栅端，NCON是NMOS的栅端
 .subckt TG  IN  VNW VPW  PCON  NCON  OUT
 
-XP2   IN     PCON    OUT    VNW    p11ll_ckt            W=1.7e-07  L=4e-08
-XN2   IN     NCON    OUT    VPW    n11ll_ckt            W=1.7e-07  L=4e-08
+*XP2   IN     PCON    OUT    VNW    p11ll_ckt            W=1.7e-07  L=4e-08
+*XN2   IN     NCON    OUT    VPW    n11ll_ckt            W=1.7e-07  L=4e-08
+XP2   IN     PCON    OUT    VNW    p11ll_ckt            W=2.3675e-07 L=4e-08
+XN2   IN     NCON    OUT    VPW    n11ll_ckt            W=1.0e-07    L=4e-08
 
 .ends TG
 
