@@ -7,9 +7,9 @@
 .unprot
 
 * 测试电路网表
-.inc 'D:\VLSI_homework\final\24T_TGFF\TEST_CIRCUIT.net'
+.inc 'D:\VLSI_homework\final\24T_CSFF\TEST_CIRCUIT.net'
 * 仿真电路网表
-.inc 'D:\VLSI_homework\final\24T_TGFF\24T_TGFF.net'
+.inc 'D:\VLSI_homework\final\24T_CSFF\24T_CSFF.net'
 
 .option post nomod 
 .param SUPPLY = 1.1V
@@ -26,7 +26,7 @@ VVNW VNW 0 'SUPPLY'
 VVSS VSS 0 0
 
 * 时钟信号为幅值1.1v 周期3ns 占空比50% 
-VIN1 CLK VSS PULSE 0V 1.1V 0 0.01n 0.01n 1.5n 3n
+VIN1 CK VSS PULSE 0V 1.1V 0 0.01n 0.01n 1.5n 3n
 * 输入信号为幅值1.1v 周期8ns 占空比50% 
 VIN2 IN  0 PULSE 0V 1.1V 0 0.01n 0.01n 4n 8n
 
