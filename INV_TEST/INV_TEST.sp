@@ -18,7 +18,7 @@ INV_TEST
 *反相器 
 .subckt INV  IN VDD VNW VPW VSS OUT
 
-XP1  VDD  IN  OUT   VNW  p11ll_ckt                   W=2.3675e-07 L=4e-08
+XP1  VDD  IN  OUT    VNW  p11ll_ckt                   W=2.3675e-07 L=4e-08
 XN1  VSS  IN  OUT    VPW  n11ll_ckt                    W=1.0e-07 L=4e-08
 
 .ends INV

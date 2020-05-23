@@ -1,14 +1,14 @@
 *反相器 
 .subckt INV_TEST  IN VDD VNW VPW VSS OUT
 
-XP1  VDD  IN  OUT   VNW  p11ll_ckt                   W=2.1e-07  L=4e-08
-XN1  VSS  IN  OUT    VPW  n11ll_ckt                    W=1.2e-07  L=4e-08
+XP1  VDD  IN  OUT   VNW  p11ll_ckt                  W=2.1e-07  L=4e-08
+XN1  VSS  IN  OUT   VPW  n11ll_ckt                  W=1.2e-07  L=4e-08
 
 .ends INV
 
 * 测试电路，输入信号经过两个反向器进入到待测电路的输入端 TEST_IN
-X_INV1 IN   VDD VNW VPW VSS  1             INV_TEST
-X_INV2  1   VDD VNW VPW VSS  TEST_IN       INV_TEST
+X_INV1 IN       VDD VNW VPW VSS  TEST_1        INV_TEST
+X_INV2 TEST_1   VDD VNW VPW VSS  D       INV_TEST
 
 * 负载为一个电容，初始电压为0V
-C_CLOAD OUT  VSS  '0.002pf+19*0.0005pf'  ic=0v
+C_CLOAD Q   0  '0.002pf+19*0.0005pf'  ic=0v

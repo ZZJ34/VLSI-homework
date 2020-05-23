@@ -190,19 +190,19 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.09           1          52
-  transient          1.03      240012       13503        5026 rev=       754
-  readin             0.09
+  op point           0.08           1          52
+  transient          0.92      240012       13503        5026 rev=       754
+  readin             0.08
   errchk             0.02
   setup              0.02
   output             0.00
 
 
            total memory used          461  kbytes
-           total cpu time            1.53 seconds
-           total elapsed time        1.62 seconds
-           job started at     19:40:48 05/23/2020
-           job ended   at     19:40:50 05/23/2020
+           total cpu time            1.38 seconds
+           total elapsed time        1.48 seconds
+           job started at     22:06:07 05/23/2020
+           job ended   at     22:06:09 05/23/2020
 
 
   lic: Release hspice token(s) 

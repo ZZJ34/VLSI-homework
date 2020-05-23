@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "C-2009.09 32-BIT"
 * "format" "HSP"
-* "rundate" "19:40:48 05/23/2020 "
+* "rundate" "22:06:07 05/23/2020 "
 * "netlist" "d:\vlsi_homework\final\inv_test\inv_test.sp "
 * "runtitle" "inv_test"
 * time =    0.            
