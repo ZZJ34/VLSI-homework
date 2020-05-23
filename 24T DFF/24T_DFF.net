@@ -1,0 +1,36 @@
+*经典24管D触发器的网表文件 
+
+*反相器 
+.subckt INV_D  IN VDD VNW VPW VSS OUT
+
+XP1  VDD  IN  OUT    VNW  p11ll_ckt                     W=2.3675e-07 L=4e-08
+XN1  VSS  IN  OUT    VPW  n11ll_ckt                     W=1.0e-07    L=4e-08
+
+.ends INV_D
+
+*传输门 PCON是PMOS的栅端，NCON是NMOS的栅端
+.subckt TG  IN  VNW VPW  PCON  NCON  OUT
+
+XP2   IN     PCON    OUT    VNW    p11ll_ckt            W=1.7e-07  L=4e-08
+XN2   IN     NCON    OUT    VPW    n11ll_ckt            W=1.7e-07  L=4e-08
+
+.ends TG
+
+*时钟信号 CKI 和 CKN 由 CLK 产生
+X_CLK1 CLK VDD VNW VPW VSS CKN INV_D
+X_CLK2 CKN VDD VNW VPW VSS CKI INV_D
+
+*电路连接
+* MASTER 部分
+X_MASTER_INV_1 D    VDD VNW  VPW   VSS      1     INV_D
+X_MASTER_TG_1  1    VNW VPW  CKI   CKN      2     TG
+X_MASTER_INV_2 2    VDD VNW  VPW   VSS      3     INV_D
+X_MASTER_INV_3 3    VDD VNW  VPW   VSS      4     INV_D
+X_MASTER_TG_2  4    VNW VPW  CKN   CKI      2     TG
+* SLAVE 部分
+X_SLAVE_TG_1   3    VNW VPW  CKN   CKI      5     TG
+X_SLAVE_INV_1  5    VDD VNW  VPW   VSS      6     INV_D
+X_SLAVE_INV_2  6    VDD VNW  VPW   VSS      Q     INV_D
+X_SLAVE_INV_3  6    VDD VNW  VPW   VSS      7     INV_D
+X_SLAVE_TG_2   7    VNW VPW  CKI   CKN      5     TG
+
