@@ -1,0 +1,22 @@
+* "simulator" "HSPICE" 
+* "version" "C-2009.09 32-BIT"
+* "format" "HSP"
+* "rundate" "17:39:32 05/23/2020 "
+* "netlist" "d:\vlsi_homework\final\24t dff\24t_dff.sp "
+* "runtitle" "24t-dff"
+* time =    0.            
+* temperature =  125.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=  10.0000f       
+.nodeset
++ cki =  10.4909u       
++ ckn =   1.1000        
++ clk =   0.            
++ in =   0.            
++ out =   5.1823n       
++ vdd =   1.1000        
++ vnw =   1.1000        
++ vpw =   0.            
++ vss =   0.            
+***   END: Saved Operating Point ***                     

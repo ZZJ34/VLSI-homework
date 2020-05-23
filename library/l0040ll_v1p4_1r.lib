@@ -1,0 +1,726 @@
+
+* Five corners are supported: TT, FF, SS, FNSP and SNFP.
+* This file should be used with the model parameter files 'l0040ll_v1p4_1r.mdl', 'l0040ll_v1p4_1r_dio.mdl',
+*****************  
+.lib pre_layout
+.option gmindc=1e-14 scale=0.9
+.param prelayout=1
+.param flag_cc=1
+.endl pre_layout
+
+******************
+* mos corner model
+******************
+.lib tt
+.option gmindc=1e-14 scale=0.9
+.param
++sigma_mis_toxe=agauss(0,3,3)
++sigma_mis_xl=agauss(0,3,3)
++sigma_mis_xw=agauss(0,3,3)
++sigma_mis_vth0=agauss(0,3,3)
++sigma_mis_u0=agauss(0,3,3)
++sigma_mis_voff=agauss(0,3,3)
+
+*1.1v core nmos (tt corner)
+.subckt n11ll_ckt d g s b w=1e-6 l=1e-6 sa='sar' sb='sbr' sd='sdr' as='asr' ad='adr' ps='psr' pd='pdr' nrd='nrdr' nrs='nrsr' sca=0 scb=0 scc=0 nf=1 mr=1 globalmod=1 mismod=1 dps=0.14u dpcs=0.04u dsts=1u lpemod=1 prelayout=0 dcn='dcnr'
+.param
++dmcgr = 3.5e-8
++dmcir = 3.5e-8
++scale_mos = 0.9
++xlr = 5.8e-9
++xwr = 1.7e-8
++sar = '0.261e-6/scale_mos'
++sbr = '0.261e-6/scale_mos'
++sdr = '2*dmcgr/scale_mos'
++adr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++asr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++pdr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++psr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++nrdr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++nrsr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++dcnr = 'max(1,int(((w/nf-0.009*1e-6*2/scale_mos)-0.054*1e-6/scale_mos)/(0.126*1e-6/scale_mos)+1))'
+******mismatch******
++lef = 'l*scale_mos+xlr'
++wef = 'w*scale_mos/nf+xwr'
++geo_fac = '1/sqrt(wef*lef*nf*mr)'
++atoxe_n11ll = 4.82135e-019
++axl_n11ll   = 5.73936e-017
++axw_n11ll   = 6.46943e-017
++avth0_n11ll = 2.17575e-009
++au0_n11ll   = 7.22841e-015
++avoff_n11ll = 2.6423e-009
++dtoxe_n11ll_mis    = '0+atoxe_n11ll*geo_fac*sigma_mis_toxe*mismod'
++dxl_n11ll_mis      = '0+axl_n11ll*geo_fac*sigma_mis_xl*mismod'
++dxw_n11ll_mis      = '0+axw_n11ll*geo_fac*sigma_mis_xw*mismod'
++dvth0_n11ll_mis    = '0+avth0_n11ll*geo_fac*sigma_mis_vth0*mismod'
++du0_n11ll_mis      = '0+au0_n11ll*geo_fac*sigma_mis_u0*mismod'
++dvoff_n11ll_mis    = '0+avoff_n11ll*geo_fac*sigma_mis_voff*mismod'
+******corner******
++dtoxe_n11ll        = '0+dtoxe_n11ll_mis'
++dxl_n11ll          = '0+dxl_n11ll_mis'
++dxw_n11ll          = '0+dxw_n11ll_mis'
++dvth_n11ll         = '0+dvth0_n11ll_mis'
++du0_n11ll          = '0+du0_n11ll_mis'
++dvoff_n11ll        = '0+dvoff_n11ll_mis'
++dcgdo_n11ll        = '0+prelayout*6.64e-18*dcn/(w*scale_mos)'
++dcgso_n11ll        = '0+prelayout*6.64e-18*dcn/(w*scale_mos)'
++dcjs_n11ll          = 0
++dcjsws_n11ll        = 0
++dcjswgs_n11ll       = 0
++dcf_n11ll           = 0
++dcgdl_n11ll         = 0
++dcgsl_n11ll         = 0
++dlvth0_n11ll        = 0
++dwvth0_n11ll        = 0
++dpvth0_n11ll        = 0
++dlu0_n11ll          = 0
++dlvsat_n11ll        = 0
++dags_n11ll          = 0
++dpvsat_n11ll        = 0
++dlvoff_n11ll        = 0
++dleta0_n11ll        = 0
++ddlc_n11ll          = 0
+m1 d g s b n11ll_ckt w=w l=l sa=sa sb=sb sd=sd as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs sca=sca scb=scb scc=scc nf=nf m=mr
+.inc 'l0040ll_v1p4_1r.mdl'
+.inc 'l0040ll_lpe_v1p4_1r_n11ll.mdl'
+.ends n11ll_ckt
+
+*1.1v core pmos (tt corner)
+.subckt p11ll_ckt d g s b w=1e-6 l=1e-6 sa='sar' sb='sbr' sd='sdr' as='asr' ad='adr' ps='psr' pd='pdr' nrd='nrdr' nrs='nrsr' sca=0 scb=0 scc=0 nf=1 mr=1 globalmod=1 mismod=1 dps=0.14u dpcs=0.04u dsts=1u lpemod=1 prelayout=0 dcn='dcnr'
+.param
++dmcgr = 3.5e-8
++dmcir = 3.5e-8
++scale_mos = 0.9
++xlr = 5.1e-9
++xwr = 1.8e-8
++sar = '2.61e-7/scale_mos'
++sbr = '2.61e-7/scale_mos'
++sdr = '2*dmcgr/scale_mos'
++adr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++asr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++pdr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++psr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++nrdr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++nrsr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++dcnr = 'max(1,int(((w/nf-0.009*1e-6*2/scale_mos)-0.054*1e-6/scale_mos)/(0.126*1e-6/scale_mos)+1))'
+******mismatch******
++dtoxe_p11ll_mis      ='0+atoxe_p11ll*geo_fac*sigma_mis_toxe*mismod'
++dvth0_p11ll_mis      ='0+avth0_p11ll*geo_fac*sigma_mis_vth0*mismod'
++dvoff_p11ll_mis      ='0+avoff_p11ll*geo_fac*sigma_mis_voff*mismod'
++du0_p11ll_mis      ='0+au0_p11ll*geo_fac*sigma_mis_u0*mismod'
++dxl_p11ll_mis      ='0+axl_p11ll*geo_fac*sigma_mis_xl*mismod'
++dxw_p11ll_mis      ='0+axw_p11ll*geo_fac*sigma_mis_xw*mismod'
++geo_fac              = '1/sqrt(wef*lef*nf*mr)'
++lef                  = 'l*scale_mos+xlr'
++wef                  = 'w*scale_mos/nf+xwr'
++atoxe_p11ll          = 4.82135e-019
++avth0_p11ll          = 2.17575e-009
++avoff_p11ll          = 2.6423e-009
++au0_p11ll          = 7.22841e-015
++axl_p11ll          = 5.73936e-017
++axw_p11ll          = 6.46943e-017
+******corner******
++dtoxe_p11ll          ='0+dtoxe_p11ll_mis'
++dvth_p11ll           ='0+dvth0_p11ll_mis'
++dvoff_p11ll          ='0+dvoff_p11ll_mis'
++dxw_p11ll            ='0+dxw_p11ll_mis'
++dxl_p11ll            ='0+dxl_p11ll_mis'
++du0_p11ll            ='0+du0_p11ll_mis'
++dcf_p11ll            = 0
++dcjs_p11ll           = 0
++dcjsws_p11ll         = 0
++dcjswgs_p11ll        = 0
++dcgdl_p11ll          = 0
++dcgsl_p11ll          = 0
++dlvth0_p11ll         = 0
++dwvth0_p11ll         = 0
++dpvth0_p11ll         = 0
++dlu0_p11ll           = 0
++dpu0_p11ll           = 0
++dlvsat_p11ll         = 0
++dpvsat_p11ll         = 0
++deta0_p11ll          = 0
++dpvoff_p11ll         = 0
++dcgdo_p11ll          = '0+prelayout*7.63e-18*dcn/(w*scale_mos)'
++dcgso_p11ll          = '0+prelayout*7.63e-18*dcn/(w*scale_mos)'
++ddlc_p11ll           = 0
+m1 d g s b p11ll_ckt w=w l=l sa=sa sb=sb sd=sd as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs sca=sca scb=scb scc=scc nf=nf m=mr
+.inc 'l0040ll_v1p4_1r.mdl'
+.inc 'l0040ll_lpe_v1p4_1r_p11ll.mdl'
+.ends p11ll_ckt
+
+
+.endl  tt
+
+.lib ff
+.option gmindc=1e-14 scale=0.9
+.param
++sigma_mis_toxe=agauss(0,3,3)
++sigma_mis_xl=agauss(0,3,3)
++sigma_mis_xw=agauss(0,3,3)
++sigma_mis_vth0=agauss(0,3,3)
++sigma_mis_u0=agauss(0,3,3)
++sigma_mis_voff=agauss(0,3,3)
+
+*1.1v core nmos (ff corner)
+.subckt n11ll_ckt d g s b w=1e-6 l=1e-6 sa='sar' sb='sbr' sd='sdr' as='asr' ad='adr' ps='psr' pd='pdr' nrd='nrdr' nrs='nrsr' sca=0 scb=0 scc=0 nf=1 mr=1 globalmod=1 mismod=1 dps=0.14u dpcs=0.04u dsts=1u lpemod=1 prelayout=0 dcn='dcnr'
+.param
++dmcgr = 3.5e-8
++dmcir = 3.5e-8
++scale_mos = 0.9
++xlr = 5.8e-9
++xwr = 1.7e-8
++sar = '0.261e-6/scale_mos'
++sbr = '0.261e-6/scale_mos'
++sdr = '2*dmcgr/scale_mos'
++adr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++asr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++pdr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++psr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++nrdr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++nrsr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++dcnr = 'max(1,int(((w/nf-0.009*1e-6*2/scale_mos)-0.054*1e-6/scale_mos)/(0.126*1e-6/scale_mos)+1))'
+******mismatch******
++lef = 'l*scale_mos+xlr'
++wef = 'w*scale_mos/nf+xwr'
++geo_fac = '1/sqrt(wef*lef*nf*mr)'
++atoxe_n11ll = 4.82135e-019
++axl_n11ll   = 5.73936e-017
++axw_n11ll   = 6.46943e-017
++avth0_n11ll = 2.17575e-009
++au0_n11ll   = 7.22841e-015
++avoff_n11ll = 2.6423e-009
++dtoxe_n11ll_mis    = '0+atoxe_n11ll*geo_fac*sigma_mis_toxe*mismod'
++dxl_n11ll_mis      = '0+axl_n11ll*geo_fac*sigma_mis_xl*mismod'
++dxw_n11ll_mis      = '0+axw_n11ll*geo_fac*sigma_mis_xw*mismod'
++dvth0_n11ll_mis    = '0+avth0_n11ll*geo_fac*sigma_mis_vth0*mismod'
++du0_n11ll_mis      = '0+au0_n11ll*geo_fac*sigma_mis_u0*mismod'
++dvoff_n11ll_mis    = '0+avoff_n11ll*geo_fac*sigma_mis_voff*mismod'
+******corner******
++dtoxe_n11ll        = '-2e-011+dtoxe_n11ll_mis'
++dxl_n11ll          = '-2.381e-009+dxl_n11ll_mis'
++dxw_n11ll          = '2.686e-009+dxw_n11ll_mis'
++dvth_n11ll         = '-0.0295+dvth0_n11ll_mis'
++du0_n11ll          = '-0.0005+du0_n11ll_mis'
++dvoff_n11ll        = '0+dvoff_n11ll_mis'
++dcgdo_n11ll        = '3.37e-012+prelayout*6.64e-18*dcn/(w*scale_mos)'
++dcgso_n11ll        = '3.37e-012+prelayout*6.64e-18*dcn/(w*scale_mos)'
++dcjs_n11ll         = -7.37e-005
++dcjsws_n11ll       = -2.57e-012
++dcjswgs_n11ll      = -1.41e-011
++dcf_n11ll          = 3.86e-012
++dcgdl_n11ll        = 2.85e-012
++dcgsl_n11ll        = 2.85e-012
++dlvth0_n11ll       = -2.62e-010
++dwvth0_n11ll       = -3.8e-009
++dpvth0_n11ll       = -2.55e-016
++dlu0_n11ll         = -1.03e-010
++dlvsat_n11ll       = -3.6e-4
++dags_n11ll         = -0.15
++dpvsat_n11ll       = 0
++dlvoff_n11ll       = -1e-9
++dleta0_n11ll       = -5e-010
++ddlc_n11ll         = -7e-9
+m1 d g s b n11ll_ckt w=w l=l sa=sa sb=sb sd=sd as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs sca=sca scb=scb scc=scc nf=nf m=mr
+.inc 'l0040ll_v1p4_1r.mdl'
+.inc 'l0040ll_lpe_v1p4_1r_n11ll.mdl'
+.ends n11ll_ckt
+
+*1.1v core pmos (ff corner)
+.subckt p11ll_ckt d g s b w=1e-6 l=1e-6 sa='sar' sb='sbr' sd='sdr' as='asr' ad='adr' ps='psr' pd='pdr' nrd='nrdr' nrs='nrsr' sca=0 scb=0 scc=0 nf=1 mr=1 globalmod=1 mismod=1 dps=0.14u dpcs=0.04u dsts=1u lpemod=1 prelayout=0 dcn='dcnr'
+.param
++dmcgr = 3.5e-8
++dmcir = 3.5e-8
++scale_mos = 0.9
++xlr = 5.1e-9
++xwr = 1.8e-8
++sar = '2.61e-7/scale_mos'
++sbr = '2.61e-7/scale_mos'
++sdr = '2*dmcgr/scale_mos'
++adr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++asr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++pdr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++psr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++nrdr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++nrsr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++dcnr = 'max(1,int(((w/nf-0.009*1e-6*2/scale_mos)-0.054*1e-6/scale_mos)/(0.126*1e-6/scale_mos)+1))'
+******mismatch******
++dtoxe_p11ll_mis      ='0+atoxe_p11ll*geo_fac*sigma_mis_toxe*mismod'
++dvth0_p11ll_mis      ='0+avth0_p11ll*geo_fac*sigma_mis_vth0*mismod'
++dvoff_p11ll_mis      ='0+avoff_p11ll*geo_fac*sigma_mis_voff*mismod'
++du0_p11ll_mis      ='0+au0_p11ll*geo_fac*sigma_mis_u0*mismod'
++dxl_p11ll_mis      ='0+axl_p11ll*geo_fac*sigma_mis_xl*mismod'
++dxw_p11ll_mis      ='0+axw_p11ll*geo_fac*sigma_mis_xw*mismod'
++geo_fac              = '1/sqrt(wef*lef*nf*mr)'
++lef                  = 'l*scale_mos+xlr'
++wef                  = 'w*scale_mos/nf+xwr'
++atoxe_p11ll          = 4.82135e-019
++avth0_p11ll          = 2.17575e-009
++avoff_p11ll          = 2.6423e-009
++au0_p11ll          = 7.22841e-015
++axl_p11ll          = 5.73936e-017
++axw_p11ll          = 6.46943e-017
+******corner******
++dtoxe_p11ll          ='-3.3e-011+dtoxe_p11ll_mis'
++dvth_p11ll           ='0.0385+dvth0_p11ll_mis'
++dvoff_p11ll          ='0+dvoff_p11ll_mis'
++dxw_p11ll            = '2.686e-009+dxw_p11ll_mis'
++dxl_p11ll            = '-2.381e-009+dxl_p11ll_mis'
++du0_p11ll            = '-0.00025+du0_p11ll_mis'
++dcf_p11ll            = 3.3e-012
++dcjs_p11ll           = -0.00070505
++dcjsws_p11ll         = -2.7478e-011
++dcjswgs_p11ll        = -9.165e-012
++dcgdl_p11ll          = 3.5e-012
++dcgsl_p11ll          = 3.5e-012
++dlvth0_p11ll         = 0
++dwvth0_p11ll         = 0
++dpvth0_p11ll         = 2.915e-016
++dlu0_p11ll           = -4.9e-012
++dpu0_p11ll           = -8.6e-018
++dlvsat_p11ll         = 0.000262
++dpvsat_p11ll         = -1.25e-011
++deta0_p11ll          = -0.0045
++dpvoff_p11ll         = 0
++dcgdo_p11ll          = '2.7e-012+prelayout*7.63e-18*dcn/(w*scale_mos)'
++dcgso_p11ll          = '2.7e-012+prelayout*7.63e-18*dcn/(w*scale_mos)'
++ddlc_p11ll           = -7e-9
+m1 d g s b p11ll_ckt w=w l=l sa=sa sb=sb sd=sd as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs sca=sca scb=scb scc=scc nf=nf m=mr
+.inc 'l0040ll_v1p4_1r.mdl'
+.inc 'l0040ll_lpe_v1p4_1r_p11ll.mdl'
+.ends p11ll_ckt
+
+
+
+.endl  ff
+
+
+.lib ss
+.option gmindc=1e-14 scale=0.9
+.param
++sigma_mis_toxe = agauss(0,3,3)
++sigma_mis_xl   = agauss(0,3,3)
++sigma_mis_xw   = agauss(0,3,3)
++sigma_mis_vth0 = agauss(0,3,3)
++sigma_mis_u0   = agauss(0,3,3)
++sigma_mis_voff = agauss(0,3,3)
+
+*1.1v core nmos (ss corner)
+.subckt n11ll_ckt d g s b w=1e-6 l=1e-6 sa='sar' sb='sbr' sd='sdr' as='asr' ad='adr' ps='psr' pd='pdr' nrd='nrdr' nrs='nrsr' sca=0 scb=0 scc=0 nf=1 mr=1 globalmod=1 mismod=1 dps=0.14u dpcs=0.04u dsts=1u lpemod=1 prelayout=0 dcn='dcnr'
+.param
++dmcgr = 3.5e-8
++dmcir = 3.5e-8
++scale_mos = 0.9
++xlr = 5.8e-9
++xwr = 1.7e-8
++sar = '0.261e-6/scale_mos'
++sbr = '0.261e-6/scale_mos'
++sdr = '2*dmcgr/scale_mos'
++adr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++asr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++pdr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++psr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++nrdr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++nrsr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++dcnr = 'max(1,int(((w/nf-0.009*1e-6*2/scale_mos)-0.054*1e-6/scale_mos)/(0.126*1e-6/scale_mos)+1))'
+******mismatch******
++lef = 'l*scale_mos+xlr'
++wef = 'w*scale_mos/nf+xwr'
++geo_fac = '1/sqrt(wef*lef*nf*mr)'
++atoxe_n11ll = 4.82135e-019
++axl_n11ll   = 5.73936e-017
++axw_n11ll   = 6.46943e-017
++avth0_n11ll = 2.17575e-009
++au0_n11ll   = 7.22841e-015
++avoff_n11ll = 2.6423e-009
++dtoxe_n11ll_mis    = '0+atoxe_n11ll*geo_fac*sigma_mis_toxe*mismod'
++dxl_n11ll_mis      = '0+axl_n11ll*geo_fac*sigma_mis_xl*mismod'
++dxw_n11ll_mis      = '0+axw_n11ll*geo_fac*sigma_mis_xw*mismod'
++dvth0_n11ll_mis    = '0+avth0_n11ll*geo_fac*sigma_mis_vth0*mismod'
++du0_n11ll_mis      = '0+au0_n11ll*geo_fac*sigma_mis_u0*mismod'
++dvoff_n11ll_mis    = '0+avoff_n11ll*geo_fac*sigma_mis_voff*mismod'
+******corner******
++dtoxe_n11ll        = '2e-011+dtoxe_n11ll_mis'
++dxl_n11ll          = '2.381e-009+dxl_n11ll_mis'
++dxw_n11ll          = '-2.686e-009+dxw_n11ll_mis'
++dvth_n11ll         = '0.0295+dvth0_n11ll_mis'
++du0_n11ll          = '0.00045+du0_n11ll_mis'
++dvoff_n11ll        = '0+dvoff_n11ll_mis'
++dcgdo_n11ll        = '-3.37e-012+prelayout*6.64e-18*dcn/(w*scale_mos)'
++dcgso_n11ll        = '-3.37e-012+prelayout*6.64e-18*dcn/(w*scale_mos)'
++dcjs_n11ll         = 7.37e-005
++dcjsws_n11ll       = 2.57e-012
++dcjswgs_n11ll      = 1.41e-011
++dcf_n11ll          = -3.86e-012
++dcgdl_n11ll        = -2.85e-012
++dcgsl_n11ll        = -2.85e-012
++dlvth0_n11ll       = 6.23e-010
++dwvth0_n11ll       = 2.9e-009
++dpvth0_n11ll       = 1.59e-016
++dlu0_n11ll         = 1.00e-010
++dlvsat_n11ll       = 7.45e-4
++dags_n11ll         = 0.15
++dpvsat_n11ll       = -1.66e-10
++dlvoff_n11ll       = 1e-9
++dleta0_n11ll       = 4e-10
++ddlc_n11ll         = 7e-9
+m1 d g s b n11ll_ckt w=w l=l sa=sa sb=sb sd=sd as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs sca=sca scb=scb scc=scc nf=nf m=mr
+.inc 'l0040ll_v1p4_1r.mdl'
+.inc 'l0040ll_lpe_v1p4_1r_n11ll.mdl'
+.ends n11ll_ckt
+
+*1.1v core pmos (ss corner)
+.subckt p11ll_ckt d g s b w=1e-6 l=1e-6 sa='sar' sb='sbr' sd='sdr' as='asr' ad='adr' ps='psr' pd='pdr' nrd='nrdr' nrs='nrsr' sca=0 scb=0 scc=0 nf=1 mr=1 globalmod=1 mismod=1 dps=0.14u dpcs=0.04u dsts=1u lpemod=1 prelayout=0 dcn='dcnr'
+.param
++dmcgr = 3.5e-8
++dmcir = 3.5e-8
++scale_mos = 0.9
++xlr = 5.1e-9
++xwr = 1.8e-8
++sar = '2.61e-7/scale_mos'
++sbr = '2.61e-7/scale_mos'
++sdr = '2*dmcgr/scale_mos'
++adr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++asr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++pdr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++psr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++nrdr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++nrsr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++dcnr = 'max(1,int(((w/nf-0.009*1e-6*2/scale_mos)-0.054*1e-6/scale_mos)/(0.126*1e-6/scale_mos)+1))'
+******mismatch******
++dtoxe_p11ll_mis      ='0+atoxe_p11ll*geo_fac*sigma_mis_toxe*mismod'
++dvth0_p11ll_mis      ='0+avth0_p11ll*geo_fac*sigma_mis_vth0*mismod'
++dvoff_p11ll_mis      ='0+avoff_p11ll*geo_fac*sigma_mis_voff*mismod'
++du0_p11ll_mis      ='0+au0_p11ll*geo_fac*sigma_mis_u0*mismod'
++dxl_p11ll_mis      ='0+axl_p11ll*geo_fac*sigma_mis_xl*mismod'
++dxw_p11ll_mis      ='0+axw_p11ll*geo_fac*sigma_mis_xw*mismod'
++geo_fac              = '1/sqrt(wef*lef*nf*mr)'
++lef                  = 'l*scale_mos+xlr'
++wef                  = 'w*scale_mos/nf+xwr'
++atoxe_p11ll          = 4.82135e-019
++avth0_p11ll          = 2.17575e-009
++avoff_p11ll          = 2.6423e-009
++au0_p11ll          = 7.22841e-015
++axl_p11ll          = 5.73936e-017
++axw_p11ll          = 6.46943e-017
+******corner******
++dtoxe_p11ll          ='3.3e-011+dtoxe_p11ll_mis'
++dvth_p11ll           ='-0.03+dvth0_p11ll_mis'
++dvoff_p11ll          ='0+dvoff_p11ll_mis'
++dxw_p11ll            = '-2.686e-009+dxw_p11ll_mis'
++dxl_p11ll            = '2.381e-009+dxl_p11ll_mis'
++du0_p11ll            = '0.00025+du0_p11ll_mis'
++dcf_p11ll            = -3.3e-012
++dcjs_p11ll           = 0.00070505
++dcjsws_p11ll         = 2.7478e-011
++dcjswgs_p11ll        = 9.165e-012
++dcgdl_p11ll          = -3.5e-012
++dcgsl_p11ll          = -3.5e-012
++dlvth0_p11ll         = -4.25e-010
++dwvth0_p11ll         = -6.2e-009
++dpvth0_p11ll         = 0
++dlu0_p11ll           = 6.88e-012
++dpu0_p11ll           = 1.2e-018
++dlvsat_p11ll         = -0.0002
++dpvsat_p11ll         = 0
++deta0_p11ll          = 0.0063
++dpvoff_p11ll         = 0
++dcgdo_p11ll          = '-2.7e-012+prelayout*7.63e-18*dcn/(w*scale_mos)'
++dcgso_p11ll          = '-2.7e-012+prelayout*7.63e-18*dcn/(w*scale_mos)'
++ddlc_p11ll           = 7e-9
+m1 d g s b p11ll_ckt w=w l=l sa=sa sb=sb sd=sd as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs sca=sca scb=scb scc=scc nf=nf m=mr
+.inc 'l0040ll_v1p4_1r.mdl'
+.inc 'l0040ll_lpe_v1p4_1r_p11ll.mdl'
+.ends p11ll_ckt
+.endl  ss
+
+
+.lib fnsp
+.option gmindc=1e-14 scale=0.9
+.param
++sigma_mis_toxe = agauss(0,3,3)
++sigma_mis_xl   = agauss(0,3,3)
++sigma_mis_xw   = agauss(0,3,3)
++sigma_mis_vth0 = agauss(0,3,3)
++sigma_mis_u0   = agauss(0,3,3)
++sigma_mis_voff = agauss(0,3,3)
+
+*1.1v core nmos (fnsp corner)
+.subckt n11ll_ckt d g s b w=1e-6 l=1e-6 sa='sar' sb='sbr' sd='sdr' as='asr' ad='adr' ps='psr' pd='pdr' nrd='nrdr' nrs='nrsr' sca=0 scb=0 scc=0 nf=1 mr=1 globalmod=1 mismod=1 dps=0.14u dpcs=0.04u dsts=1u lpemod=1 prelayout=0 dcn='dcnr'
+.param
++dmcgr = 3.5e-8
++dmcir = 3.5e-8
++scale_mos = 0.9
++xlr = 5.8e-9
++xwr = 1.7e-8
++sar = '0.261e-6/scale_mos'
++sbr = '0.261e-6/scale_mos'
++sdr = '2*dmcgr/scale_mos'
++adr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++asr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++pdr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++psr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++nrdr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++nrsr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++dcnr = 'max(1,int(((w/nf-0.009*1e-6*2/scale_mos)-0.054*1e-6/scale_mos)/(0.126*1e-6/scale_mos)+1))'
+******mismatch******
++lef = 'l*scale_mos+xlr'
++wef = 'w*scale_mos/nf+xwr'
++geo_fac = '1/sqrt(wef*lef*nf*mr)'
++atoxe_n11ll = 4.82135e-019
++axl_n11ll   = 5.73936e-017
++axw_n11ll   = 6.46943e-017
++avth0_n11ll = 2.17575e-009
++au0_n11ll   = 7.22841e-015
++avoff_n11ll = 2.6423e-009
++dtoxe_n11ll_mis    = '0+atoxe_n11ll*geo_fac*sigma_mis_toxe*mismod'
++dxl_n11ll_mis      = '0+axl_n11ll*geo_fac*sigma_mis_xl*mismod'
++dxw_n11ll_mis      = '0+axw_n11ll*geo_fac*sigma_mis_xw*mismod'
++dvth0_n11ll_mis    = '0+avth0_n11ll*geo_fac*sigma_mis_vth0*mismod'
++du0_n11ll_mis      = '0+au0_n11ll*geo_fac*sigma_mis_u0*mismod'
++dvoff_n11ll_mis    = '0+avoff_n11ll*geo_fac*sigma_mis_voff*mismod'
+******corner******
++dtoxe_n11ll        = '0+dtoxe_n11ll_mis'
++dxl_n11ll          = '0+dxl_n11ll_mis'
++dxw_n11ll          = '0+dxw_n11ll_mis'
++dvth_n11ll         = '-0.025+dvth0_n11ll_mis'
++du0_n11ll          = '-0.0005+du0_n11ll_mis'
++dvoff_n11ll        = '0+dvoff_n11ll_mis'
++dcgdo_n11ll        = '0+prelayout*6.64e-18*dcn/(w*scale_mos)'
++dcgso_n11ll        = '0+prelayout*6.64e-18*dcn/(w*scale_mos)'
++dcjs_n11ll         = -7.37e-005
++dcjsws_n11ll       = -2.57e-012
++dcjswgs_n11ll      = -1.41e-011
++dcf_n11ll          = 0
++dcgdl_n11ll        = 0
++dcgsl_n11ll        = 0
++dlvth0_n11ll       = -2.62e-010
++dwvth0_n11ll       = -3.8e-009
++dpvth0_n11ll       = -2.55e-016
++dlu0_n11ll         = -1.03e-010
++dlvsat_n11ll       = -3.6e-6
++dags_n11ll         = -0.15
++dpvsat_n11ll       = 0
++dlvoff_n11ll       = -1e-9
++dleta0_n11ll       = -2e-010
++ddlc_n11ll         = 0
+m1 d g s b n11ll_ckt w=w l=l sa=sa sb=sb sd=sd as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs sca=sca scb=scb scc=scc nf=nf m=mr
+.inc 'l0040ll_v1p4_1r.mdl'
+.inc 'l0040ll_lpe_v1p4_1r_n11ll.mdl'
+.ends n11ll_ckt
+
+*1.1v core pmos (fnsp corner)
+.subckt p11ll_ckt d g s b w=1e-6 l=1e-6 sa='sar' sb='sbr' sd='sdr' as='asr' ad='adr' ps='psr' pd='pdr' nrd='nrdr' nrs='nrsr' sca=0 scb=0 scc=0 nf=1 mr=1 globalmod=1 mismod=1 dps=0.14u dpcs=0.04u dsts=1u lpemod=1 prelayout=0 dcn='dcnr'
+.param
++dmcgr = 3.5e-8
++dmcir = 3.5e-8
++scale_mos = 0.9
++xlr = 5.1e-9
++xwr = 1.8e-8
++sar = '2.61e-7/scale_mos'
++sbr = '2.61e-7/scale_mos'
++sdr = '2*dmcgr/scale_mos'
++adr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++asr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++pdr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++psr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++nrdr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++nrsr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++dcnr = 'max(1,int(((w/nf-0.009*1e-6*2/scale_mos)-0.054*1e-6/scale_mos)/(0.126*1e-6/scale_mos)+1))'
+******mismatch******
++dtoxe_p11ll_mis      ='0+atoxe_p11ll*geo_fac*sigma_mis_toxe*mismod'
++dvth0_p11ll_mis      ='0+avth0_p11ll*geo_fac*sigma_mis_vth0*mismod'
++dvoff_p11ll_mis      ='0+avoff_p11ll*geo_fac*sigma_mis_voff*mismod'
++du0_p11ll_mis      ='0+au0_p11ll*geo_fac*sigma_mis_u0*mismod'
++dxl_p11ll_mis      ='0+axl_p11ll*geo_fac*sigma_mis_xl*mismod'
++dxw_p11ll_mis      ='0+axw_p11ll*geo_fac*sigma_mis_xw*mismod'
++geo_fac              = '1/sqrt(wef*lef*nf*mr)'
++lef                  = 'l*scale_mos+xlr'
++wef                  = 'w*scale_mos/nf+xwr'
++atoxe_p11ll          = 4.82135e-019
++avth0_p11ll          = 2.17575e-009
++avoff_p11ll          = 2.6423e-009
++au0_p11ll          = 7.22841e-015
++axl_p11ll          = 5.73936e-017
++axw_p11ll          = 6.46943e-017
+******corner******
++dtoxe_p11ll          ='0+dtoxe_p11ll_mis'
++dvth_p11ll           ='-0.025+dvth0_p11ll_mis'
++dvoff_p11ll          ='0+dvoff_p11ll_mis'
++dxw_p11ll            = '0+dxw_p11ll_mis'
++dxl_p11ll            = '0+dxl_p11ll_mis'
++du0_p11ll            = '0.00022+du0_p11ll_mis'
++dcf_p11ll            = 0
++dcjs_p11ll           = 0.00070505
++dcjsws_p11ll         = 2.7478e-011
++dcjswgs_p11ll        = 9.165e-012
++dcgdl_p11ll          = 0
++dcgsl_p11ll          = 0
++dlvth0_p11ll         = -4.25e-010
++dwvth0_p11ll         = -6.2e-009
++dpvth0_p11ll         = 0
++dlu0_p11ll           = 7.96e-012
++dpu0_p11ll           = 1.2e-018
++dlvsat_p11ll         = -0.0002
++dpvsat_p11ll         = 0
++deta0_p11ll          = 0.0063
++dpvoff_p11ll         = 0
++dcgdo_p11ll          = '0+prelayout*7.63e-18*dcn/(w*scale_mos)'
++dcgso_p11ll          = '0+prelayout*7.63e-18*dcn/(w*scale_mos)'
++ddlc_p11ll          = 0
+m1 d g s b p11ll_ckt w=w l=l sa=sa sb=sb sd=sd as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs sca=sca scb=scb scc=scc nf=nf m=mr
+.inc 'l0040ll_v1p4_1r.mdl'
+.inc 'l0040ll_lpe_v1p4_1r_p11ll.mdl'
+.ends p11ll_ckt
+
+
+.endl  fnsp
+
+
+
+.lib snfp
+.option gmindc=1e-14 scale=0.9
+.param
++sigma_mis_toxe = agauss(0,3,3)
++sigma_mis_xl   = agauss(0,3,3)
++sigma_mis_xw   = agauss(0,3,3)
++sigma_mis_vth0 = agauss(0,3,3)
++sigma_mis_u0   = agauss(0,3,3)
++sigma_mis_voff = agauss(0,3,3)
+
+*1.1v core nmos (snfp corner)
+.subckt n11ll_ckt d g s b w=1e-6 l=1e-6 sa='sar' sb='sbr' sd='sdr' as='asr' ad='adr' ps='psr' pd='pdr' nrd='nrdr' nrs='nrsr' sca=0 scb=0 scc=0 nf=1 mr=1 globalmod=1 mismod=1 dps=0.14u dpcs=0.04u dsts=1u lpemod=1 prelayout=0 dcn='dcnr'
+.param
++dmcgr = 3.5e-8
++dmcir = 3.5e-8
++scale_mos = 0.9
++xlr = 5.8e-9
++xwr = 1.7e-8
++sar = '0.261e-6/scale_mos'
++sbr = '0.261e-6/scale_mos'
++sdr = '2*dmcgr/scale_mos'
++adr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++asr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++pdr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++psr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++nrdr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++nrsr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++dcnr = 'max(1,int(((w/nf-0.009*1e-6*2/scale_mos)-0.054*1e-6/scale_mos)/(0.126*1e-6/scale_mos)+1))'
+******mismatch******
++lef = 'l*scale_mos+xlr'
++wef = 'w*scale_mos/nf+xwr'
++geo_fac = '1/sqrt(wef*lef*nf*mr)'
++atoxe_n11ll = 4.82135e-019
++axl_n11ll   = 5.73936e-017
++axw_n11ll   = 6.46943e-017
++avth0_n11ll = 2.17575e-009
++au0_n11ll   = 7.22841e-015
++avoff_n11ll = 2.6423e-009
++dtoxe_n11ll_mis    = '0+atoxe_n11ll*geo_fac*sigma_mis_toxe*mismod'
++dxl_n11ll_mis      = '0+axl_n11ll*geo_fac*sigma_mis_xl*mismod'
++dxw_n11ll_mis      = '0+axw_n11ll*geo_fac*sigma_mis_xw*mismod'
++dvth0_n11ll_mis    = '0+avth0_n11ll*geo_fac*sigma_mis_vth0*mismod'
++du0_n11ll_mis      = '0+au0_n11ll*geo_fac*sigma_mis_u0*mismod'
++dvoff_n11ll_mis    = '0+avoff_n11ll*geo_fac*sigma_mis_voff*mismod'
+******corner******
++dtoxe_n11ll        = '0+dtoxe_n11ll_mis'
++dxl_n11ll          = '0+dxl_n11ll_mis'
++dxw_n11ll          = '0+dxw_n11ll_mis'
++dvth_n11ll         = '0.025+dvth0_n11ll_mis'
++du0_n11ll          = '0.00045+du0_n11ll_mis'
++dvoff_n11ll        = '0+dvoff_n11ll_mis'
++dcgdo_n11ll        = '0+prelayout*6.64e-18*dcn/(w*scale_mos)'
++dcgso_n11ll        = '0+prelayout*6.64e-18*dcn/(w*scale_mos)'
++dcjs_n11ll         = 7.37e-005
++dcjsws_n11ll       = 2.57e-012
++dcjswgs_n11ll      = 1.41e-011
++dcf_n11ll          = 0
++dcgdl_n11ll        = 0
++dcgsl_n11ll        = 0
++dlvth0_n11ll       = 6.23e-010
++dwvth0_n11ll       = 2.9e-009
++dpvth0_n11ll       = 1.59e-016
++dlu0_n11ll         = 1.00e-010
++dlvsat_n11ll       = 4e-4
++dags_n11ll         = 0.15
++dpvsat_n11ll       = -1.66e-10
++dlvoff_n11ll       = 1e-9
++dleta0_n11ll       = 2e-10
++ddlc_n11ll         = 0
+m1 d g s b n11ll_ckt w=w l=l sa=sa sb=sb sd=sd as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs sca=sca scb=scb scc=scc nf=nf m=mr
+.inc 'l0040ll_v1p4_1r.mdl'
+.inc 'l0040ll_lpe_v1p4_1r_n11ll.mdl'
+.ends n11ll_ckt
+
+*1.1v core pmos (snfp corner)
+.subckt p11ll_ckt d g s b w=1e-6 l=1e-6 sa='sar' sb='sbr' sd='sdr' as='asr' ad='adr' ps='psr' pd='pdr' nrd='nrdr' nrs='nrsr' sca=0 scb=0 scc=0 nf=1 mr=1 globalmod=1 mismod=1 dps=0.14u dpcs=0.04u dsts=1u lpemod=1 prelayout=0 dcn='dcnr'
+.param
++dmcgr = 3.5e-8
++dmcir = 3.5e-8
++scale_mos = 0.9
++xlr = 5.1e-9
++xwr = 1.8e-8
++sar = '2.61e-7/scale_mos'
++sbr = '2.61e-7/scale_mos'
++sdr = '2*dmcgr/scale_mos'
++adr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++asr = '(nf*dmcgr+dmcir)/scale_mos*(w/nf+xwr/scale_mos)'
++pdr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++psr = '2*(nf*dmcgr+dmcir)/scale_mos+(nf+1)*(w/nf+xwr/scale_mos)'
++nrdr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++nrsr = 'dmcgr/scale_mos/nf/(w/nf+xwr/scale_mos)'
++dcnr = 'max(1,int(((w/nf-0.009*1e-6*2/scale_mos)-0.054*1e-6/scale_mos)/(0.126*1e-6/scale_mos)+1))'
+******mismatch******
++dtoxe_p11ll_mis      ='0+atoxe_p11ll*geo_fac*sigma_mis_toxe*mismod'
++dvth0_p11ll_mis      ='0+avth0_p11ll*geo_fac*sigma_mis_vth0*mismod'
++dvoff_p11ll_mis      ='0+avoff_p11ll*geo_fac*sigma_mis_voff*mismod'
++du0_p11ll_mis      ='0+au0_p11ll*geo_fac*sigma_mis_u0*mismod'
++dxl_p11ll_mis      ='0+axl_p11ll*geo_fac*sigma_mis_xl*mismod'
++dxw_p11ll_mis      ='0+axw_p11ll*geo_fac*sigma_mis_xw*mismod'
++geo_fac              = '1/sqrt(wef*lef*nf*mr)'
++lef                  = 'l*scale_mos+xlr'
++wef                  = 'w*scale_mos/nf+xwr'
++atoxe_p11ll          = 4.82135e-019
++avth0_p11ll          = 2.17575e-009
++avoff_p11ll          = 2.6423e-009
++au0_p11ll          = 7.22841e-015
++axl_p11ll          = 5.73936e-017
++axw_p11ll          = 6.46943e-017
+******corner******
++dtoxe_p11ll          ='0+dtoxe_p11ll_mis'
++dvth_p11ll           ='0.0335+dvth0_p11ll_mis'
++dvoff_p11ll          ='0+dvoff_p11ll_mis'
++dxw_p11ll            = '0+dxw_p11ll_mis'
++dxl_p11ll            = '0+dxl_p11ll_mis'
++du0_p11ll            = '-0.00025+du0_p11ll_mis'
++dcf_p11ll            = 0
++dcjs_p11ll           = -0.00070505
++dcjsws_p11ll         = -2.7478e-011
++dcjswgs_p11ll        = -9.165e-012
++dcgdl_p11ll          = 0
++dcgsl_p11ll          = 0
++dlvth0_p11ll         = 0
++dwvth0_p11ll         = 0
++dpvth0_p11ll         = 2.915e-016
++dlu0_p11ll           = -4.9e-012
++dpu0_p11ll           = -8.6e-018
++dlvsat_p11ll         = 0.000262
++dpvsat_p11ll         = -1.25e-011
++deta0_p11ll          = -0.0045
++dpvoff_p11ll         = 0
++dcgdo_p11ll          = '0+prelayout*7.63e-18*dcn/(w*scale_mos)'
++dcgso_p11ll          = '0+prelayout*7.63e-18*dcn/(w*scale_mos)'
++ddlc_p11ll           = 0
+m1 d g s b p11ll_ckt w=w l=l sa=sa sb=sb sd=sd as=as ad=ad ps=ps pd=pd nrd=nrd nrs=nrs sca=sca scb=scb scc=scc nf=nf m=mr
+.inc 'l0040ll_v1p4_1r.mdl'
+.inc 'l0040ll_lpe_v1p4_1r_p11ll.mdl'
+.ends p11ll_ckt
+
+
+
+.endl  snfp
+
+
+
+
+
