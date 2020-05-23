@@ -5,7 +5,7 @@
   terms and conditions of the license agreement from Synopsys.
   Use of this program is your acceptance to be bound by the 
   license agreement. HSPICE is the trademark of Synopsys, Inc.
-  Input File: d:\vlsi_homework\final\24t_dff\24t_dff.sp                         
+  Input File: d:\vlsi_homework\final\24t_tgff\24t_tgff.sp                       
   lic:  
   lic: FLEXlm: v8.5b 
   lic: USER:    ZZJ                 HOSTNAME: LAPTOP-CH7L8TQ9 
@@ -19,7 +19,7 @@
   lic:   
  Init: read install configuration file: F:\synopsys\Hspice_C-2009.09\meta.cfg
   **warning** (F:\synopsys\library_40\l0040ll_v1p4_1r.mdl:6)  associated with encrypted blocks were suppressed due to encrypted content
-  **warning** (d:\vlsi_homework\final\24t_dff\24t_dff.sp:35) syntax error while using .print/.probe, missing output variable.
+  **warning** (d:\vlsi_homework\final\24t_tgff\24t_tgff.sp:35) syntax error while using .print/.probe, missing output variable.
   Syntax:
   .print/.probe  <analysis type (optional)>  <output variable/expression/parameter of current/voltage/element template>
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
@@ -44,7 +44,7 @@
        12 x_slave_inv_2.                  inv_d              1.00 
        13 x_slave_inv_3.                  inv_d              1.00 
        14 x_slave_tg_2.                   tg                 1.00 
-  **warning** (d:\vlsi_homework\final\24t_dff\24t_dff.sp:29) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
+  **warning** (d:\vlsi_homework\final\24t_tgff\24t_tgff.sp:29) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
  
       
  **diagnostic** set option symb=1 internally to help for convergence.
@@ -53,7 +53,7 @@
  ******
  runlvl  = 6         bypass  = 2         
   Opening plot unit= 79
- file=d:\vlsi_homework\final\24t_dff\24t_dff.pa0                               
+ file=d:\vlsi_homework\final\24t_tgff\24t_tgff.pa0                             
 
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
  ******  
@@ -101,18 +101,18 @@
 
   analysis           time    # points   tot. iter  conv.iter
   op point           0.02           1           9
-  transient          0.88       60001       10843        3995 rev=       390
-  readin             0.10
+  transient          0.87       60001       10843        3995 rev=       390
+  readin             0.08
   errchk             0.02
-  setup              0.03
+  setup              0.02
   output             0.00
 
 
            total memory used          676  kbytes
-           total cpu time            1.09 seconds
-           total elapsed time        1.17 seconds
-           job started at     22:15:52 05/23/2020
-           job ended   at     22:15:53 05/23/2020
+           total cpu time            1.04 seconds
+           total elapsed time        1.12 seconds
+           job started at     23:09:53 05/23/2020
+           job ended   at     23:09:54 05/23/2020
 
 
   lic: Release hspice token(s) 

@@ -7,9 +7,9 @@
 .unprot
 
 * 测试电路网表
-.inc 'D:\VLSI_homework\final\24T_DFF\TEST_CIRCUIT.net'
+.inc 'D:\VLSI_homework\final\24T_TGFF\TEST_CIRCUIT.net'
 * 仿真电路网表
-.inc 'D:\VLSI_homework\final\24T_DFF\24T_DFF.net'
+.inc 'D:\VLSI_homework\final\24T_TGFF\24T_TGFF.net'
 
 .option post nomod 
 .param SUPPLY = 1.1V

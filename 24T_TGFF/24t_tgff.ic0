@@ -1,8 +1,8 @@
 * "simulator" "HSPICE" 
 * "version" "C-2009.09 32-BIT"
 * "format" "HSP"
-* "rundate" "22:15:52 05/23/2020 "
-* "netlist" "d:\vlsi_homework\final\24t_dff\24t_dff.sp "
+* "rundate" "23:09:53 05/23/2020 "
+* "netlist" "d:\vlsi_homework\final\24t_tgff\24t_tgff.sp "
 * "runtitle" "24t-dff"
 * time =    0.            
 * temperature =  100.0000        
