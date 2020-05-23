@@ -11,7 +11,7 @@
 * 仿真电路网表
 .inc 'D:\VLSI_homework\final\24T_DFF\24T_DFF.net'
 
-.option post =2
+.option post nomod 
 .param SUPPLY = 1.1V
 .param T = 0.0001n
 .temp 125
@@ -19,15 +19,21 @@
 .op
 
 
-
+* 公共端
 VVDD VDD 0 'SUPPLY'
 VVPW VPW 0 0
 VVNW VNW 0 'SUPPLY'
 VVSS VSS 0 0
 
-VIN1 CLK 0 PWL 0 0V 1n 0V  1.01n  1.1V  2.0n 1.1V 2.01n 0V
-VIN2 IN  0 PWL 0 0V 1.5n 0V  1.51n  1.1V 
+* 时钟信号为幅值1.1v 周期3ns 占空比50% 
+VIN1 CLK VSS PULSE 0V 1.1V 0 0.01n 0.01n 1.5n 3n
+* 输入信号为幅值1.1v 周期8ns 占空比50% 
+VIN2 IN  VSS PULSE 0V 1.1V 0 0.01n 0.01n 4n 8n
 
-.tran 0.001n 10n
+* 连接电路
+.CONNECT TEST_IN   D
+.CONNECT Q         OUT
+
+.tran 0.001n 60n
 .probe
 .end
