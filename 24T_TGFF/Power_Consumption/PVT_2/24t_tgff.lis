@@ -1,0 +1,317 @@
+ ****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
+  Copyright (C) 2009 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: d:\vlsi_homework\final\24t_tgff\power_consumption\pvt_2\24t_tgff.s
+  lic:  
+  lic: FLEXlm: v8.5b 
+  lic: USER:    ZZJ                 HOSTNAME: LAPTOP-CH7L8TQ9 
+  lic: HOSTID: "f430b9ae4e60 00ff66c6b359 5413792f7072 005056c00001 005056c00008
+  
+  lic: Using FLEXlm license file: 
+  lic: 27000@localhost 
+  lic: Checkout 1 hspice 
+  lic: License/Maintenance for hspice will expire on 31-dec-2028/2008.120 
+  lic: FLOATING license(s) on SERVER localhost 
+  lic:   
+ Init: read install configuration file: F:\synopsys\Hspice_C-2009.09\meta.cfg
+  **warning** (F:\synopsys\library_40\l0040ll_v1p4_1r.mdl:6)  associated with encrypted blocks were suppressed due to encrypted content
+1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
+ ******  
+ 24t-tgff
+
+  ******  circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x_inv1.                         inv_test           1.00 
+        2 x_inv2.                         inv_test           1.00 
+        3 x_clk1.                         inv_d              1.00 
+        4 x_clk2.                         inv_d              1.00 
+        5 x_master_inv_1.                 inv_d              1.00 
+        6 x_master_tg_1.                  tg                 1.00 
+        7 x_master_inv_2.                 inv_d              1.00 
+        8 x_master_inv_3.                 inv_d              1.00 
+        9 x_master_tg_2.                  tg                 1.00 
+       10 x_slave_tg_1.                   tg                 1.00 
+       11 x_slave_inv_1.                  inv_d              1.00 
+       12 x_slave_inv_2.                  inv_d              1.00 
+       13 x_slave_inv_3.                  inv_d              1.00 
+       14 x_slave_tg_2.                   tg                 1.00 
+  **warning** (d:\vlsi_homework\final\24t_tgff\power_consumption\pvt_2\24t_tgff.sp:31) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
+ 
+ **warning**  no dc path to ground from node        0:in               defined in subckt 0               now it is connected with gdcpath
+
+
+      
+ **diagnostic** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 6         bypass  = 2         
+  Opening plot unit= 79
+ file=d:\vlsi_homework\final\24t_tgff\power_consumption\pvt_2\24t_tgff.pa0     
+
+1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
+ ******  
+ 24t-tgff
+
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
+ ***** operating point status is voltage   simulation time is     0.     
+     node    =voltage       node    =voltage       node    =voltage
+
+ + 0:1       = 549.9994m  0:2       = 549.9994m  0:3       =   2.8023u
+ + 0:4       = 549.9994m  0:5       = 549.9956m  0:6       =   1.1864u
+ + 0:7       = 549.9975m  0:cki     =   1.1871u  0:ckn     = 549.9994m
+ + 0:clk     =   0.       0:d       = 781.3778n  0:in      = 111.6723m
+ + 0:q       = 549.9994m  0:test_1  = 549.8904m  0:vdd     = 550.0000m
+ + 0:vnw     = 550.0000m  0:vpw     =   0.       0:vss     =   0.     
+
+
+          ***** job concluded
+1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
+ ******  
+ 24t-tgff
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count                  :     1
+  Available CPU Count                         :     4
+  Actual Model Evaluation(Load) Threads Count :     1
+  Actual Solver Threads Count                 :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      75 # elements   =      34
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       5
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      28 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.02           1          14
+  readin             0.09
+  errchk             0.03
+  setup              0.02
+  output             0.00
+
+
+           total memory used          675  kbytes
+           total cpu time            0.17 seconds
+           total elapsed time        0.27 seconds
+           job started at     19:41:18 05/24/2020
+           job ended   at     19:41:18 05/24/2020
+
+
+  **warning** (F:\synopsys\library_40\l0040ll_v1p4_1r.mdl:6)  associated with encrypted blocks were suppressed due to encrypted content
+1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
+ ******  
+ static
+
+  ******  circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x_inv1.                         inv_test           1.00 
+        2 x_inv2.                         inv_test           1.00 
+        3 x_clk1.                         inv_d              1.00 
+        4 x_clk2.                         inv_d              1.00 
+        5 x_master_inv_1.                 inv_d              1.00 
+        6 x_master_tg_1.                  tg                 1.00 
+        7 x_master_inv_2.                 inv_d              1.00 
+        8 x_master_inv_3.                 inv_d              1.00 
+        9 x_master_tg_2.                  tg                 1.00 
+       10 x_slave_tg_1.                   tg                 1.00 
+       11 x_slave_inv_1.                  inv_d              1.00 
+       12 x_slave_inv_2.                  inv_d              1.00 
+       13 x_slave_inv_3.                  inv_d              1.00 
+       14 x_slave_tg_2.                   tg                 1.00 
+  **warning** (d:\vlsi_homework\final\24t_tgff\power_consumption\pvt_2\24t_tgff.sp:31) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
+ 
+      
+ **diagnostic** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 6         bypass  = 2         
+  Opening plot unit= 79
+ file=d:\vlsi_homework\final\24t_tgff\power_consumption\pvt_2\24t_tgff.pa1     
+
+1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
+ ******  
+ static
+
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
+ ***** operating point status is voltage   simulation time is     0.     
+     node    =voltage       node    =voltage       node    =voltage
+
+ + 0:1       = 549.9994m  0:2       = 549.9994m  0:3       =   1.4119u
+ + 0:4       = 549.9994m  0:5       = 279.1114m  0:6       = 279.0843m
+ + 0:7       = 279.1867m  0:cki     =   1.1776u  0:ckn     = 549.9994m
+ + 0:clk     =   0.       0:d       = 778.1863n  0:in      =   0.     
+ + 0:q       = 279.2937m  0:test_1  = 549.9992m  0:vdd     = 550.0000m
+ + 0:vnw     = 550.0000m  0:vpw     =   0.       0:vss     =   0.     
+
+ ******  
+ static
+
+  ******  transient analysis tnom=  25.000 temp=  25.000 *****
+   p_avg=  1.4726E-07  from=  0.0000E+00     to=  2.0000E-07
+
+          ***** job concluded
+1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
+ ******  
+ static
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count                  :     1
+  Available CPU Count                         :     4
+  Actual Model Evaluation(Load) Threads Count :     1
+  Actual Solver Threads Count                 :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      75 # elements   =      35
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       6
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      28 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.02           1          11
+  transient          1.80      200001       22135        8182 rev=      1007
+  readin             0.12
+  errchk             0.02
+  setup              0.02
+  output             0.00
+
+
+           total memory used          642  kbytes
+           total cpu time            2.00 seconds
+           total elapsed time        2.03 seconds
+           job started at     19:41:18 05/24/2020
+           job ended   at     19:41:20 05/24/2020
+
+
+  **warning** (F:\synopsys\library_40\l0040ll_v1p4_1r.mdl:6)  associated with encrypted blocks were suppressed due to encrypted content
+1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
+ ******  
+ dynamic
+
+  ******  circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x_inv1.                         inv_test           1.00 
+        2 x_inv2.                         inv_test           1.00 
+        3 x_clk1.                         inv_d              1.00 
+        4 x_clk2.                         inv_d              1.00 
+        5 x_master_inv_1.                 inv_d              1.00 
+        6 x_master_tg_1.                  tg                 1.00 
+        7 x_master_inv_2.                 inv_d              1.00 
+        8 x_master_inv_3.                 inv_d              1.00 
+        9 x_master_tg_2.                  tg                 1.00 
+       10 x_slave_tg_1.                   tg                 1.00 
+       11 x_slave_inv_1.                  inv_d              1.00 
+       12 x_slave_inv_2.                  inv_d              1.00 
+       13 x_slave_inv_3.                  inv_d              1.00 
+       14 x_slave_tg_2.                   tg                 1.00 
+
+**warning**:NO.   2 tran analysis statement is duplicate, ignored!
+  **warning** (d:\vlsi_homework\final\24t_tgff\power_consumption\pvt_2\24t_tgff.sp:31) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
+ 
+      
+ **diagnostic** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 6         bypass  = 2         
+  Opening plot unit= 79
+ file=d:\vlsi_homework\final\24t_tgff\power_consumption\pvt_2\24t_tgff.pa2     
+
+1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
+ ******  
+ dynamic
+
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
+ ***** operating point status is voltage   simulation time is     0.     
+     node    =voltage       node    =voltage       node    =voltage
+
+ + 0:1       = 549.9994m  0:2       = 549.9994m  0:3       =   1.4119u
+ + 0:4       = 549.9994m  0:5       = 279.1114m  0:6       = 279.0843m
+ + 0:7       = 279.1867m  0:cki     =   1.1776u  0:ckn     = 549.9994m
+ + 0:clk     =   0.       0:d       = 778.1863n  0:in      =   0.     
+ + 0:q       = 279.2937m  0:test_1  = 549.9992m  0:vdd     = 550.0000m
+ + 0:vnw     = 550.0000m  0:vpw     =   0.       0:vss     =   0.     
+
+ ******  
+ dynamic
+
+  ******  transient analysis tnom=  25.000 temp=  25.000 *****
+   p_avg=  6.0604E-07  from=  0.0000E+00     to=  2.0000E-07
+
+          ***** job concluded
+1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
+ ******  
+ dynamic
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count                  :     1
+  Available CPU Count                         :     4
+  Actual Model Evaluation(Load) Threads Count :     1
+  Actual Solver Threads Count                 :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      75 # elements   =      35
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       6
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      28 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.02           1          11
+  transient          2.62      200001       32344       11662 rev=      1337
+  readin             0.10
+  errchk             0.03
+  setup              0.02
+  output             0.00
+
+
+           total memory used          642  kbytes
+           total cpu time            2.80 seconds
+           total elapsed time        2.83 seconds
+           job started at     19:41:18 05/24/2020
+           job ended   at     19:41:23 05/24/2020
+
+
+  lic: Release hspice token(s) 

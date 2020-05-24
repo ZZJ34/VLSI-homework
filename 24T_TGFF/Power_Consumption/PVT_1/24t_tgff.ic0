@@ -1,0 +1,31 @@
+* "simulator" "HSPICE" 
+* "version" "C-2009.09 32-BIT"
+* "format" "HSP"
+* "rundate" "19:39:31 05/24/2020 "
+* "netlist" "d:\vlsi_homework\final\24t_tgff\power_consumption\pvt_1\24t_tgff.sp "
+* "runtitle" "24t-tgff"
+* time =    0.            
+* temperature =   70.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=  10.0000f       
+.nodeset
++ 1 = 499.9986m       
++ 2 = 499.9985m       
++ 3 =  11.7923u       
++ 4 = 499.9986m       
++ 5 = 271.1950m       
++ 6 = 271.1246m       
++ 7 = 271.3204m       
++ cki =  10.5126u       
++ ckn = 499.9986m       
++ clk =   0.            
++ d =   6.2421u       
++ in =  77.7778m       
++ q = 271.6447m       
++ test_1 = 499.9411m       
++ vdd = 500.0000m       
++ vnw = 500.0000m       
++ vpw =   0.            
++ vss =   0.            
+***   END: Saved Operating Point ***                     

@@ -5,7 +5,7 @@
   terms and conditions of the license agreement from Synopsys.
   Use of this program is your acceptance to be bound by the 
   license agreement. HSPICE is the trademark of Synopsys, Inc.
-  Input File: d:\vlsi_homework\final\24t_tgff\24t_tgff.sp                       
+  Input File: d:\vlsi_homework\final\24t_csff\power_consumption\pvt_2\24t_csff.s
   lic:  
   lic: FLEXlm: v8.5b 
   lic: USER:    ZZJ                 HOSTNAME: LAPTOP-CH7L8TQ9 
@@ -19,12 +19,9 @@
   lic:   
  Init: read install configuration file: F:\synopsys\Hspice_C-2009.09\meta.cfg
   **warning** (F:\synopsys\library_40\l0040ll_v1p4_1r.mdl:6)  associated with encrypted blocks were suppressed due to encrypted content
-  **warning** (d:\vlsi_homework\final\24t_tgff\24t_tgff.sp:37) syntax error while using .print/.probe, missing output variable.
-  Syntax:
-  .print/.probe  <analysis type (optional)>  <output variable/expression/parameter of current/voltage/element template>
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
  ******  
- 24t-tgff
+ 24t-csff
 
   ******  circuit name directory
  circuit number to circuit name directory
@@ -32,20 +29,14 @@
         0 main circuit
         1 x_inv1.                         inv_test           1.00 
         2 x_inv2.                         inv_test           1.00 
-        3 x_clk1.                         inv_d              1.00 
-        4 x_clk2.                         inv_d              1.00 
-        5 x_master_inv_1.                 inv_d              1.00 
-        6 x_master_tg_1.                  tg                 1.00 
-        7 x_master_inv_2.                 inv_d              1.00 
-        8 x_master_inv_3.                 inv_d              1.00 
-        9 x_master_tg_2.                  tg                 1.00 
-       10 x_slave_tg_1.                   tg                 1.00 
-       11 x_slave_inv_1.                  inv_d              1.00 
-       12 x_slave_inv_2.                  inv_d              1.00 
-       13 x_slave_inv_3.                  inv_d              1.00 
-       14 x_slave_tg_2.                   tg                 1.00 
-  **warning** (d:\vlsi_homework\final\24t_tgff\24t_tgff.sp:31) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
+        9 x_master_i1.                    inv_d              1.00 
+       19 x_slave_i2.                     inv_d              1.00 
+       20 x_slave_i3.                     inv_d              1.00 
+  **warning** (d:\vlsi_homework\final\24t_csff\power_consumption\pvt_2\24t_csff.sp:32) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
  
+ **warning**  no dc path to ground from node        0:in               defined in subckt 0               now it is connected with gdcpath
+
+
       
  **diagnostic** set option symb=1 internally to help for convergence.
  *****************************************************************
@@ -53,30 +44,31 @@
  ******
  runlvl  = 6         bypass  = 2         
   Opening plot unit= 79
- file=d:\vlsi_homework\final\24t_tgff\24t_tgff.pa0                             
+ file=d:\vlsi_homework\final\24t_csff\power_consumption\pvt_2\24t_csff.pa0     
 
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
  ******  
- 24t-tgff
+ 24t-csff
 
-  ******  operating point information tnom=  25.000 temp= 100.000 *****
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
  ***** operating point status is voltage   simulation time is     0.     
      node    =voltage       node    =voltage       node    =voltage
 
- + 0:1       =   1.1000   0:2       =   1.1000   0:3       =   7.8405u
- + 0:4       =   1.1000   0:5       = 565.5187m  0:6       = 565.5145m
- + 0:7       = 565.5268m  0:cki     =   6.8376u  0:ckn     =   1.1000 
- + 0:clk     =   0.       0:d       =   4.6123u  0:in      =   0.     
- + 0:q       = 565.5477m  0:test_1  =   1.1000   0:vdd     =   1.1000 
- + 0:vnw     =   1.1000   0:vpw     =   0.       0:vss     =   0.     
+ + 0:ck      =   0.       0:cs      = 549.9987m  0:csu_1   =   3.6960u
+ + 0:csu_2   = 442.5000m  0:csu_3   =   2.8725u  0:d       = 781.0750n
+ + 0:di      =   1.1750u  0:dn      = 549.9983m  0:in      = 111.6723m
+ + 0:master_1= 549.9991m  0:master_2= 549.9986m  0:q       = 549.9994m
+ + 0:qi      = 549.9994m  0:qn      =   4.9179u  0:slave_1 =   2.4569u
+ + 0:slave_2 = 100.4819m  0:test_1  = 549.8904m  0:vdd     = 550.0000m
+ + 0:vnw     = 550.0000m  0:vpw     =   0.       0:vss     =   0.     
 
 
           ***** job concluded
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
  ******  
- 24t-tgff
+ 24t-csff
 
-  ******  job statistics summary tnom=  25.000 temp= 100.000 *****
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
 
   ******  HSPICE Threads Information  ******
 
@@ -87,10 +79,10 @@
 
 
   ******  Circuit Statistics  ******
-  # nodes       =      75 # elements   =      35
+  # nodes       =      78 # elements   =      34
   # resistors   =       0 # capacitors =       1 # inductors   =       0
   # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
-  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       6
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       5
   # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
   # jfets       =       0 # mosfets    =      28 # U elements  =       0
   # T elements  =       0 # W elements =       0 # B elements  =       0
@@ -100,8 +92,7 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.02           1           9
-  transient          0.88       60001       10776        3965 rev=       394
+  op point           0.02           1          28
   readin             0.09
   errchk             0.03
   setup              0.02
@@ -109,10 +100,9 @@
 
 
            total memory used          676  kbytes
-           total cpu time            1.07 seconds
-           total elapsed time        1.15 seconds
-           job started at     19:38:23 05/24/2020
-           job ended   at     19:38:24 05/24/2020
+           total cpu time            0.18 seconds
+           total elapsed time        0.26 seconds
+           job started at     21:43:19 05/24/2020
+           job ended   at     21:43:20 05/24/2020
 
 
-  lic: Release hspice token(s) 

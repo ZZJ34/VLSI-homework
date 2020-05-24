@@ -32,27 +32,27 @@
        option scale    =    0.900
        option post
        option nomod
- init: end read circuit files,  cpu clock=  1.67E-01 memory=    163 kb
- init: begin check errors,  cpu clock=  1.67E-01
- init: end check errors,  cpu clock=  1.92E-01 memory=    598 kb
- init: begin setup matrix, pivot=     0 cpu clock=  1.92E-01
-       establish matrix -- done,  cpu clock=  2.05E-01 memory=    630 kb
-       re-order matrix -- done,  cpu clock=  2.10E-01 memory=    640 kb
- init: end setup matrix,  cpu clock=  2.22E-01 memory=    674 kb
- dcop: begin dcop,  cpu clock=  2.29E-01
- dcop: end dcop,  cpu clock=  2.42E-01 memory=    674 kb  tot_iter=       9
+ init: end read circuit files,  cpu clock=  1.74E-01 memory=    163 kb
+ init: begin check errors,  cpu clock=  1.74E-01
+ init: end check errors,  cpu clock=  2.03E-01 memory=    598 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  2.03E-01
+       establish matrix -- done,  cpu clock=  2.14E-01 memory=    630 kb
+       re-order matrix -- done,  cpu clock=  2.20E-01 memory=    640 kb
+ init: end setup matrix,  cpu clock=  2.27E-01 memory=    674 kb
+ dcop: begin dcop,  cpu clock=  2.36E-01
+ dcop: end dcop,  cpu clock=  2.49E-01 memory=    674 kb  tot_iter=       9
  output: d:\vlsi_homework\final\24t_tgff\24t_tgff.tr0
- sweep: tran tran0    begin, stop_t=  6.00E-08 #sweeps=**** cpu clock=  2.56E-01
- tran: time= 6.0000E-09 tot_iter=    1031 conv_iter=     379 cpu clock= 3.39E-01
- tran: time= 1.2000E-08 tot_iter=    2123 conv_iter=     780 cpu clock= 4.28E-01
- tran: time= 1.8000E-08 tot_iter=    3219 conv_iter=    1182 cpu clock= 5.17E-01
- tran: time= 2.4000E-08 tot_iter=    4293 conv_iter=    1575 cpu clock= 6.08E-01
- tran: time= 3.0000E-08 tot_iter=    5387 conv_iter=    1975 cpu clock= 6.96E-01
- tran: time= 3.6000E-08 tot_iter=    6494 conv_iter=    2382 cpu clock= 7.89E-01
- tran: time= 4.2000E-08 tot_iter=    7576 conv_iter=    2779 cpu clock= 8.81E-01
- tran: time= 4.8000E-08 tot_iter=    8650 conv_iter=    3172 cpu clock= 9.69E-01
- tran: time= 5.4000E-08 tot_iter=    9744 conv_iter=    3572 cpu clock= 1.05E+00
- tran: time= 6.0000E-08 tot_iter=   10851 conv_iter=    3979 cpu clock= 1.15E+00
- sweep: tran tran0    end,  cpu clock=  1.15E+00 memory=    676 kb
+ sweep: tran tran0    begin, stop_t=  6.00E-08 #sweeps=**** cpu clock=  2.60E-01
+ tran: time= 6.0000E-09 tot_iter=    1002 conv_iter=     368 cpu clock= 3.43E-01
+ tran: time= 1.2000E-08 tot_iter=    2097 conv_iter=     772 cpu clock= 4.33E-01
+ tran: time= 1.8000E-08 tot_iter=    3175 conv_iter=    1169 cpu clock= 5.23E-01
+ tran: time= 2.4000E-08 tot_iter=    4253 conv_iter=    1565 cpu clock= 6.10E-01
+ tran: time= 3.0000E-08 tot_iter=    5339 conv_iter=    1964 cpu clock= 6.98E-01
+ tran: time= 3.6000E-08 tot_iter=    6435 conv_iter=    2368 cpu clock= 7.86E-01
+ tran: time= 4.2000E-08 tot_iter=    7514 conv_iter=    2765 cpu clock= 8.75E-01
+ tran: time= 4.8000E-08 tot_iter=    8592 conv_iter=    3161 cpu clock= 9.65E-01
+ tran: time= 5.4000E-08 tot_iter=    9678 conv_iter=    3560 cpu clock= 1.05E+00
+ tran: time= 6.0000E-08 tot_iter=   10774 conv_iter=    3964 cpu clock= 1.14E+00
+ sweep: tran tran0    end,  cpu clock=  1.14E+00 memory=    676 kb
 >info:         ***** hspice job concluded
  lic: Release hspice token(s)
