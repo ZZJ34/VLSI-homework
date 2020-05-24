@@ -19,12 +19,12 @@
   lic:   
  Init: read install configuration file: F:\synopsys\Hspice_C-2009.09\meta.cfg
   **warning** (F:\synopsys\library_40\l0040ll_v1p4_1r.mdl:6)  associated with encrypted blocks were suppressed due to encrypted content
-  **warning** (d:\vlsi_homework\final\24t_csff\24t_csff.sp:35) syntax error while using .print/.probe, missing output variable.
+  **warning** (d:\vlsi_homework\final\24t_csff\24t_csff.sp:37) syntax error while using .print/.probe, missing output variable.
   Syntax:
   .print/.probe  <analysis type (optional)>  <output variable/expression/parameter of current/voltage/element template>
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
  ******  
- 24t-dff
+ 24t-csff
 
   ******  circuit name directory
  circuit number to circuit name directory
@@ -35,7 +35,7 @@
         9 x_master_i1.                    inv_d              1.00 
        19 x_slave_i2.                     inv_d              1.00 
        20 x_slave_i3.                     inv_d              1.00 
-  **warning** (d:\vlsi_homework\final\24t_csff\24t_csff.sp:29) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
+  **warning** (d:\vlsi_homework\final\24t_csff\24t_csff.sp:31) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
  
       
  **diagnostic** set option symb=1 internally to help for convergence.
@@ -48,25 +48,25 @@
 
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
  ******  
- 24t-dff
+ 24t-csff
 
   ******  operating point information tnom=  25.000 temp= 100.000 *****
  ***** operating point status is voltage   simulation time is     0.     
      node    =voltage       node    =voltage       node    =voltage
 
- + 0:ck      =   0.       0:cs      =   1.1000   0:csu_1   = 435.1447m
- + 0:csu_2   = 887.4630m  0:csu_3   = 435.1201m  0:d       =   4.6118u
- + 0:di      =   6.4796u  0:dn      =   1.1000   0:in      =   0.     
- + 0:master_1=   1.1000   0:master_2=   1.1000   0:q       = 563.8631m
- + 0:qi      = 563.8631m  0:qn      = 565.3172m  0:slave_1 =  59.0837m
- + 0:slave_2 = 669.9491m  0:test_1  =   1.1000   0:vdd     =   1.1000 
+ + 0:ck      =   0.       0:cs      =   1.1000   0:csu_1   = 433.9507m
+ + 0:csu_2   = 885.1452m  0:csu_3   = 433.9229m  0:d       =   4.6130u
+ + 0:di      =   7.4488u  0:dn      =   1.1000   0:in      =   0.     
+ + 0:master_1=   1.1000   0:master_2=   1.1000   0:q       = 565.0730m
+ + 0:qi      = 565.0730m  0:qn      = 566.2214m  0:slave_1 =  60.2308m
+ + 0:slave_2 = 670.5104m  0:test_1  =   1.1000   0:vdd     =   1.1000 
  + 0:vnw     =   1.1000   0:vpw     =   0.       0:vss     =   0.     
 
 
           ***** job concluded
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
  ******  
- 24t-dff
+ 24t-csff
 
   ******  job statistics summary tnom=  25.000 temp= 100.000 *****
 
@@ -92,19 +92,19 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.02           1          13
-  transient          0.91       60001       10908        3823 rev=       357
-  readin             0.09
+  op point           0.02           1          20
+  transient          0.90       60001       10870        3783 rev=       343
+  readin             0.07
   errchk             0.02
   setup              0.03
   output             0.00
 
 
            total memory used          677  kbytes
-           total cpu time            1.10 seconds
-           total elapsed time        1.18 seconds
-           job started at     00:55:55 05/24/2020
-           job ended   at     00:55:56 05/24/2020
+           total cpu time            1.07 seconds
+           total elapsed time        1.15 seconds
+           job started at     13:17:19 05/24/2020
+           job ended   at     13:17:20 05/24/2020
 
 
   lic: Release hspice token(s) 

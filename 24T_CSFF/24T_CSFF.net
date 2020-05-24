@@ -3,35 +3,35 @@
 *反相器 
 .subckt INV_D  IN VDD VNW VPW VSS OUT
 
-XP1  VDD  IN  OUT    VNW  p11ll_ckt                     W=2.3675e-07 L=4e-08
-XN1  VSS  IN  OUT    VPW  n11ll_ckt                     W=1.0e-07    L=4e-08
+XP1  VDD  IN  OUT    VNW  p11ll_ckt                     W='Wp'    L=4e-08
+XN1  VSS  IN  OUT    VPW  n11ll_ckt                     W='Wn'    L=4e-08
 
 .ends INV_D
 
 *电路连接
 * MASTER 部分
-X_MASTER_T1    VDD       D   MASTER_1    VNW  p11ll_ckt                     W=2.3675e-07 L=4e-08
-X_MASTER_T2    MASTER_1  CK  DN          VNW  p11ll_ckt                     W=2.3675e-07 L=4e-08
-X_MASTER_T3    DN        CS  CSU_2       VPW  n11ll_ckt                     W=1.0e-07    L=4e-08
-X_MASTER_T10   VDD       DI  MASTER_2    VNW  p11ll_ckt                     W=2.3675e-07 L=4e-08
-X_MASTER_T11   MASTER_2  CS  DN          VNW  p11ll_ckt                     W=2.3675e-07 L=4e-08
-X_MASTER_T12   DN        DI  CSU_2       VPW  n11ll_ckt                     W=1.0e-07    L=4e-08
+X_MASTER_T1    VDD       D   MASTER_1    VNW  p11ll_ckt                     W='Wp'       L=4e-08
+X_MASTER_T2    MASTER_1  CK  DN          VNW  p11ll_ckt                     W='Wp'       L=4e-08
+X_MASTER_T3    DN        CS  CSU_2       VPW  n11ll_ckt                     W='Wn'       L=4e-08
+X_MASTER_T10   VDD       DI  MASTER_2    VNW  p11ll_ckt                     W='Wp'       L=4e-08
+X_MASTER_T11   MASTER_2  CS  DN          VNW  p11ll_ckt                     W='Wp'       L=4e-08
+X_MASTER_T12   DN        DI  CSU_2       VPW  n11ll_ckt                     W='Wn'       L=4e-08
 X_MASTER_I1    DN  VDD  VNW  VPW  VSS  DI  INV_D
 * Change-Sensing Unit 部分
-X_CSU_T4    VDD       CK  CS          VNW  p11ll_ckt                     W=2.3675e-07 L=4e-08
-X_CSU_T5    CS        CK  CSU_1       VPW  n11ll_ckt                     W=1.0e-07    L=4e-08
-X_CSU_T6    CSU_1     QN  CSU_2       VPW  n11ll_ckt                     W=1.0e-07    L=4e-08
-X_CSU_T7    CSU_2     D   VSS         VPW  n11ll_ckt                     W=1.0e-07    L=4e-08
-X_CSU_T8    CSU_1     DN  CSU_3       VPW  n11ll_ckt                     W=1.0e-07    L=4e-08
-X_CSU_T9    CSU_3     QI  VSS         VPW  n11ll_ckt                     W=1.0e-07    L=4e-08
+X_CSU_T4    VDD       CK  CS          VNW  p11ll_ckt                     W='Wn'       L=4e-08
+X_CSU_T5    CS        CK  CSU_1       VPW  n11ll_ckt                     W='Wn'       L=4e-08
+X_CSU_T6    CSU_1     QN  CSU_2       VPW  n11ll_ckt                     W='Wn'       L=4e-08
+X_CSU_T7    CSU_2     D   VSS         VPW  n11ll_ckt                     W='Wn'       L=4e-08
+X_CSU_T8    CSU_1     DN  CSU_3       VPW  n11ll_ckt                     W='Wn'       L=4e-08
+X_CSU_T9    CSU_3     QI  VSS         VPW  n11ll_ckt                     W='Wn'       L=4e-08
 * SLAVE 部分
-X_SLAVE_T15    MASTER_2 CS   QN        VNW  p11ll_ckt                    W=2.3675e-07 L=4e-08
-X_SLAVE_T16    QN       CK   SLAVE_1   VPW  n11ll_ckt                    W=1.0e-07    L=4e-08
-X_SLAVE_T17    SLAVE_1  DI   VSS       VPW  n11ll_ckt                    W=1.0e-07    L=4e-08
+X_SLAVE_T15    MASTER_2 CS   QN        VNW  p11ll_ckt                    W='Wp'       L=4e-08
+X_SLAVE_T16    QN       CK   SLAVE_1   VPW  n11ll_ckt                    W='Wn'       L=4e-08
+X_SLAVE_T17    SLAVE_1  DI   VSS       VPW  n11ll_ckt                    W='Wn'       L=4e-08
 X_SLAVE_I2     QN  VDD  VNW  VPW  VSS  Q    INV_D
 X_SLAVE_I3     QN  VDD  VNW  VPW  VSS  QI   INV_D
-X_SLAVE_T22    VDD      QI   SLAVE_2   VNW  p11ll_ckt                    W=2.3675e-07 L=4e-08
-X_SLAVE_T23    SLAVE_2  CK   QN        VNW  p11ll_ckt                    W=2.3675e-07 L=4e-08
-X_SLAVE_T24    QN       CS   CSU_3     VPW  n11ll_ckt                    W=1.0e-07    L=4e-08
+X_SLAVE_T22    VDD      QI   SLAVE_2   VNW  p11ll_ckt                    W='Wp'       L=4e-08
+X_SLAVE_T23    SLAVE_2  CK   QN        VNW  p11ll_ckt                    W='Wp'       L=4e-08
+X_SLAVE_T24    QN       CS   CSU_3     VPW  n11ll_ckt                    W='Wn'       L=4e-08
 
 

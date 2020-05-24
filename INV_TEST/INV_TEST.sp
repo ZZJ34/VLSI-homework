@@ -10,7 +10,7 @@ INV_TEST
 
 .option post nomod  search=' '
 .param SUPPLY = 1.1V
-.param T = 0.0001n
++ T = 0.0001n
 .temp 100
 .global VSS VDD  VPW VNW 
 .op vol
@@ -31,7 +31,7 @@ VVNW VNW 0 'SUPPLY'
 VVSS VSS 0 0
 
 
-VIN IN  VSS PULSE 0V 1.1V 0 0.1n 0.1n 4n 8n
+VIN IN  VSS PULSE 0V 1.1V 2n 0.1n 0.1n 4n 8n
 
 .MEASURE TRAN 'riset' TRIG v(OUT) val=0.11V RISE=1 
 +                                  targ v(OUT) val=0.99V rise=1 
@@ -39,8 +39,8 @@ VIN IN  VSS PULSE 0V 1.1V 0 0.1n 0.1n 4n 8n
 .MEASURE TRAN 'fallt' TRIG v(OUT) val=0.99V fall=1 
 +                                  targ v(OUT) val=0.11V fall=1 
 
-.tran 0.001n 20n SWEEP TEMP -10 100 10
-
+*.tran 0.001n 20n SWEEP TEMP -10 100 10
+.tran 0.001n 40n 
 
 
 *.alter

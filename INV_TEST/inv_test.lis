@@ -56,110 +56,9 @@
  ******  
  inv_test
 
-  ******  transient analysis tnom=  25.000 temp= -10.000 *****
-   riset=  2.2761E-10  targ=  4.4310E-09   trig=  4.2034E-09
-   fallt=  2.2271E-10  targ=  3.2692E-10   trig=  1.0421E-10
-
-          ***** job concluded
- ******  
- inv_test
-
-  ******  transient analysis tnom=  25.000 temp=   0.000 *****
-   riset=  2.2830E-10  targ=  4.4311E-09   trig=  4.2028E-09
-   fallt=  2.2423E-10  targ=  3.2837E-10   trig=  1.0414E-10
-
-          ***** job concluded
- ******  
- inv_test
-
-  ******  transient analysis tnom=  25.000 temp=  10.000 *****
-   riset=  2.2896E-10  targ=  4.4313E-09   trig=  4.2023E-09
-   fallt=  2.2603E-10  targ=  3.3009E-10   trig=  1.0407E-10
-
-          ***** job concluded
- ******  
- inv_test
-
-  ******  transient analysis tnom=  25.000 temp=  20.000 *****
-   riset=  2.3053E-10  targ=  4.4324E-09   trig=  4.2019E-09
-   fallt=  2.2753E-10  targ=  3.3152E-10   trig=  1.0399E-10
-
-          ***** job concluded
- ******  
- inv_test
-
-  ******  transient analysis tnom=  25.000 temp=  30.000 *****
-   riset=  2.2974E-10  targ=  4.4312E-09   trig=  4.2015E-09
-   fallt=  2.2877E-10  targ=  3.3269E-10   trig=  1.0392E-10
-
-          ***** job concluded
- ******  
- inv_test
-
-  ******  transient analysis tnom=  25.000 temp=  40.000 *****
-   riset=  2.3073E-10  targ=  4.4318E-09   trig=  4.2011E-09
-   fallt=  2.2979E-10  targ=  3.3365E-10   trig=  1.0386E-10
-
-          ***** job concluded
- ******  
- inv_test
-
-  ******  transient analysis tnom=  25.000 temp=  50.000 *****
-   riset=  2.3170E-10  targ=  4.4324E-09   trig=  4.2007E-09
-   fallt=  2.3090E-10  targ=  3.3470E-10   trig=  1.0380E-10
-
-          ***** job concluded
- ******  
- inv_test
-
-  ******  transient analysis tnom=  25.000 temp=  60.000 *****
-   riset=  2.3318E-10  targ=  4.4336E-09   trig=  4.2004E-09
-   fallt=  2.3247E-10  targ=  3.3622E-10   trig=  1.0375E-10
-
-          ***** job concluded
- ******  
- inv_test
-
-  ******  transient analysis tnom=  25.000 temp=  70.000 *****
-   riset=  2.3280E-10  targ=  4.4329E-09   trig=  4.2001E-09
-   fallt=  2.3367E-10  targ=  3.3737E-10   trig=  1.0370E-10
-
-          ***** job concluded
- ******  
- inv_test
-
-  ******  transient analysis tnom=  25.000 temp=  80.000 *****
-   riset=  2.3469E-10  targ=  4.4345E-09   trig=  4.1999E-09
-   fallt=  2.3465E-10  targ=  3.3830E-10   trig=  1.0366E-10
-
-          ***** job concluded
- ******  
- inv_test
-
-  ******  transient analysis tnom=  25.000 temp=  90.000 *****
-   riset=  2.3596E-10  targ=  4.4356E-09   trig=  4.1996E-09
-   fallt=  2.3580E-10  targ=  3.3942E-10   trig=  1.0362E-10
-
-          ***** job concluded
- ******  
- inv_test
-
   ******  transient analysis tnom=  25.000 temp= 100.000 *****
-   riset=  2.3685E-10  targ=  4.4363E-09   trig=  4.1995E-09
-   fallt=  2.3679E-10  targ=  3.4038E-10   trig=  1.0359E-10
-
-   meas_variable = riset
-   mean  = 231.7533p  varian = 8.982e-24
-   sigma =   2.9971p  avgdev =   2.4500p
-   max   = 236.8451p  min    = 227.6097p
-    1-sigma =   2.9971p median = 231.2163p
-
-   meas_variable = fallt
-   mean  = 230.2778p  varian = 2.097e-23
-   sigma =   4.5791p  avgdev =   3.7681p
-   max   = 236.7883p  min    = 222.7128p
-    1-sigma =   4.5791p median = 230.3455p
- 
+   riset=  2.3684E-10  targ=  6.4363E-09   trig=  6.1994E-09
+   fallt=  2.3702E-10  targ=  2.3406E-09   trig=  2.1036E-09
 
           ***** job concluded
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
@@ -190,19 +89,19 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.08           1          52
-  transient          0.92      240012       13503        5026 rev=       754
+  op point           0.02           1           4
+  transient          0.09       40001        2173         798 rev=       117
   readin             0.08
-  errchk             0.02
+  errchk             0.01
   setup              0.02
   output             0.00
 
 
-           total memory used          461  kbytes
-           total cpu time            1.38 seconds
-           total elapsed time        1.48 seconds
-           job started at     22:06:07 05/23/2020
-           job ended   at     22:06:09 05/23/2020
+           total memory used          458  kbytes
+           total cpu time            0.26 seconds
+           total elapsed time        0.34 seconds
+           job started at     12:58:20 05/24/2020
+           job ended   at     12:58:20 05/24/2020
 
 
   lic: Release hspice token(s) 

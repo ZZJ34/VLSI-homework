@@ -19,12 +19,12 @@
   lic:   
  Init: read install configuration file: F:\synopsys\Hspice_C-2009.09\meta.cfg
   **warning** (F:\synopsys\library_40\l0040ll_v1p4_1r.mdl:6)  associated with encrypted blocks were suppressed due to encrypted content
-  **warning** (d:\vlsi_homework\final\24t_tgff\24t_tgff.sp:35) syntax error while using .print/.probe, missing output variable.
+  **warning** (d:\vlsi_homework\final\24t_tgff\24t_tgff.sp:37) syntax error while using .print/.probe, missing output variable.
   Syntax:
   .print/.probe  <analysis type (optional)>  <output variable/expression/parameter of current/voltage/element template>
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
  ******  
- 24t-dff
+ 24t-tgff
 
   ******  circuit name directory
  circuit number to circuit name directory
@@ -44,7 +44,7 @@
        12 x_slave_inv_2.                  inv_d              1.00 
        13 x_slave_inv_3.                  inv_d              1.00 
        14 x_slave_tg_2.                   tg                 1.00 
-  **warning** (d:\vlsi_homework\final\24t_tgff\24t_tgff.sp:29) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
+  **warning** (d:\vlsi_homework\final\24t_tgff\24t_tgff.sp:31) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
  
       
  **diagnostic** set option symb=1 internally to help for convergence.
@@ -57,7 +57,7 @@
 
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
  ******  
- 24t-dff
+ 24t-tgff
 
   ******  operating point information tnom=  25.000 temp= 100.000 *****
  ***** operating point status is voltage   simulation time is     0.     
@@ -74,7 +74,7 @@
           ***** job concluded
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
  ******  
- 24t-dff
+ 24t-tgff
 
   ******  job statistics summary tnom=  25.000 temp= 100.000 *****
 
@@ -101,18 +101,18 @@
 
   analysis           time    # points   tot. iter  conv.iter
   op point           0.02           1           9
-  transient          0.86       60001       10853        3986 rev=       406
-  readin             0.10
+  transient          0.89       60001       10853        3980 rev=       407
+  readin             0.08
   errchk             0.02
   setup              0.03
   output             0.00
 
 
            total memory used          676  kbytes
-           total cpu time            1.06 seconds
-           total elapsed time        1.15 seconds
-           job started at     01:01:00 05/24/2020
-           job ended   at     01:01:01 05/24/2020
+           total cpu time            1.08 seconds
+           total elapsed time        1.16 seconds
+           job started at     13:17:11 05/24/2020
+           job ended   at     13:17:12 05/24/2020
 
 
   lic: Release hspice token(s) 

@@ -13,7 +13,9 @@
 
 .option post nomod 
 .param SUPPLY = 1.1V
-.param T = 0.0001n
++ T = 0.0001n
++ Wp = '2.3675*Wn'
++ Wn = 1.1e-07
 .temp 100
 .global VSS VDD  VPW VNW COM1
 .op vol
@@ -28,7 +30,7 @@ VVSS VSS 0 0
 * 时钟信号为幅值1.1v 周期3ns 占空比50% 
 VIN1 CLK VSS PULSE 0V 1.1V 0 0.01n 0.01n 1.5n 3n
 * 输入信号为幅值1.1v 周期8ns 占空比50% 
-VIN2 IN  0 PULSE 0V 1.1V 0 0.01n 0.01n 4n 8n
+VIN2 IN  0 PULSE 0V 1.1V 2.5n 0.01n 0.01n 4n 8n
 
 
 .tran 0.001n 60n
