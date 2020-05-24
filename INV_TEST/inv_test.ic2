@@ -1,11 +1,11 @@
 * "simulator" "HSPICE" 
 * "version" "C-2009.09 32-BIT"
 * "format" "HSP"
-* "rundate" "12:57:32 05/24/2020 "
+* "rundate" "17:56:40 05/24/2020 "
 * "netlist" "d:\vlsi_homework\final\inv_test\inv_test.sp "
-* "runtitle" "inv_test"
+* "runtitle" "ss_dynamic"
 * time =    0.            
-* temperature =  -10.0000        
+* temperature =  100.0000        
 *** BEGIN: Saved Operating Point ***                     
 .option 
 + gmindc=  10.0000f       
@@ -13,7 +13,7 @@
 + 1 =   1.1000        
 + in =   0.            
 + out =   1.1000        
-+ test_in =  40.0131n       
++ test_in =   1.1783u       
 + vdd =   1.1000        
 + vnw =   1.1000        
 + vpw =   0.            

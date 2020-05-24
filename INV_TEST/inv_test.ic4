@@ -3,17 +3,17 @@
 * "format" "HSP"
 * "rundate" "17:56:40 05/24/2020 "
 * "netlist" "d:\vlsi_homework\final\inv_test\inv_test.sp "
-* "runtitle" "inv_test"
+* "runtitle" "tt"
 * time =    0.            
 * temperature =  100.0000        
 *** BEGIN: Saved Operating Point ***                     
 .option 
 + gmindc=  10.0000f       
 .nodeset
-+ 1 =   1.0870        
-+ in = 374.9042m       
++ 1 =   1.1000        
++ in =   0.            
 + out =   1.1000        
-+ test_in =   6.0428u       
++ test_in =   4.6119u       
 + vdd =   1.1000        
 + vnw =   1.1000        
 + vpw =   0.            
