@@ -109,7 +109,7 @@
 
   analysis           time    # points   tot. iter  conv.iter
   op point           0.02           1          63
-  readin             0.08
+  readin             0.09
   errchk             0.03
   setup              0.02
   output             0.00
@@ -118,8 +118,8 @@
            total memory used          675  kbytes
            total cpu time            0.16 seconds
            total elapsed time        0.25 seconds
-           job started at     19:44:16 05/24/2020
-           job ended   at     19:44:17 05/24/2020
+           job started at     23:31:31 05/25/2020
+           job ended   at     23:31:32 05/25/2020
 
 
   **warning** (F:\synopsys\library_40\l0040ll_v1p4_1r.mdl:6)  associated with encrypted blocks were suppressed due to encrypted content
@@ -175,7 +175,7 @@
  static
 
   ******  transient analysis tnom=  25.000 temp=  25.000 *****
-   p_avg=  6.0722E-07  from=  0.0000E+00     to=  2.0000E-07
+   p_avg=  1.9085E-08  from=  0.0000E+00     to=  1.0000E-04
 
           ***** job concluded
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
@@ -207,18 +207,18 @@
 
   analysis           time    # points   tot. iter  conv.iter
   op point           0.02           1          10
-  transient          1.91      200001       23213        8798 rev=      1211
-  readin             0.11
+  transient         23.75    10000001      329229      125688 rev=     12380
+  readin             0.12
   errchk             0.02
   setup              0.02
   output             0.00
 
 
-           total memory used          642  kbytes
-           total cpu time            2.10 seconds
-           total elapsed time        2.13 seconds
-           job started at     19:44:16 05/24/2020
-           job ended   at     19:44:19 05/24/2020
+           total memory used          670  kbytes
+           total cpu time           23.96 seconds
+           total elapsed time       24.00 seconds
+           job started at     23:31:31 05/25/2020
+           job ended   at     23:31:56 05/25/2020
 
 
   **warning** (F:\synopsys\library_40\l0040ll_v1p4_1r.mdl:6)  associated with encrypted blocks were suppressed due to encrypted content
@@ -276,7 +276,7 @@
  dynamic
 
   ******  transient analysis tnom=  25.000 temp=  25.000 *****
-   p_avg=  2.6321E-06  from=  0.0000E+00     to=  2.0000E-07
+   p_avg=  5.9113E-08  from=  0.0000E+00     to=  1.0000E-04
 
           ***** job concluded
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
@@ -308,18 +308,18 @@
 
   analysis           time    # points   tot. iter  conv.iter
   op point           0.02           1          10
-  transient          2.87      200001       36259       13309 rev=      1643
-  readin             0.12
+  transient         31.53    10000001      439310      162872 rev=     14408
+  readin             0.13
   errchk             0.02
   setup              0.02
   output             0.00
 
 
-           total memory used          642  kbytes
-           total cpu time            3.07 seconds
-           total elapsed time        3.11 seconds
-           job started at     19:44:16 05/24/2020
-           job ended   at     19:44:22 05/24/2020
+           total memory used          703  kbytes
+           total cpu time           31.76 seconds
+           total elapsed time       31.79 seconds
+           job started at     23:31:31 05/25/2020
+           job ended   at     23:32:27 05/25/2020
 
 
   lic: Release hspice token(s) 
