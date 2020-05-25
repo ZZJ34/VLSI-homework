@@ -29,12 +29,12 @@ VVSS VSS 0 0
 
 
 VIN1 CK 0 PWL 0n 0V 10n 0V 10.001n 'SUPPLY' 50n 'SUPPLY' 50.001n 0V 80n 0V 80.001n 'SUPPLY' 
-VIN2 IN 0 PWL 0n 0V 65n 0V 65.001n 'SUPPLY'
+VIN2 IN 0 PWL 0n 'SUPPLY' 65n 'SUPPLY' 65.001n 0V
 
 
 .TRAN 0.0001n 450n 
 .MEASURE TRAN 'Tclk2q' TRIG v(ck) val='0.5*SUPPLY' RISE=2 
-+                      targ v(q)  val='0.5*SUPPLY' rise=1 
++                      targ v(q)  val='0.5*SUPPLY' fall=1 
 
 
 .probe tran v(in) v(ck) c(q)
