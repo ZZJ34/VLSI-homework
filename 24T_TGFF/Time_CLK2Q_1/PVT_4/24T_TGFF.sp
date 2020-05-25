@@ -37,6 +37,6 @@ VIN2 IN 0 PWL 0n 0V 6.5n 0V 6.501n 'SUPPLY'
 +                      targ v(q)   val='0.5*SUPPLY' rise=1 
 
 
-.probe tran v(in) v(ck) c(q)
+.probe tran v(in) v(clk) c(q)
 
 .end
