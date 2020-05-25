@@ -16,7 +16,7 @@
 + T = 0.0001n
 + Wp = '2.3675*Wn'
 + Wn = 1.1e-07
-+ T_hold = Thold
++ T_Setup = Tsu
 .temp 25
 .global VSS VDD  VPW VNW COM1
 .op vol
@@ -30,12 +30,12 @@ VVSS VSS 0 0
 
 
 VIN1 CK 0 PWL 0n 0V 10n 0V 10.001n 'SUPPLY' 50n 'SUPPLY' 50.001n 0V 80n 0V 80.001n 'SUPPLY' 
-VIN2 IN 0 PWL 0n 0V 60n 0v 60.001n 'SUPPLY' '79.25ns+T_hold' 'SUPPLY' '79.25ns+T_hold+0.001ns' 0V
+VIN2 IN 0 PWL 0n 0V '80ns-T_Setup' 0V '80ns-T_Setup+0.001ns' 'SUPPLY'
 
 
 .TRAN 0.0001n 450n 
-+ START=Thold   
-+ SWEEP Thold 0ns 50ps 1ps
++ START=Tsu   
++ SWEEP Tsu 800ps 810ps 1ps
 
 .probe tran v(in) v(ck) c(q)
 

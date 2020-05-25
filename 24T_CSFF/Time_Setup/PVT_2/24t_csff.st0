@@ -1,0 +1,223 @@
+***** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******
+ Input File: d:\vlsi_homework\final\24t_csff\time_setup\pvt_2\24t_csff.sp
+ lic:
+ lic: FLEXlm: v8.5b
+ lic: USER:    ZZJ                 HOSTNAME: LAPTOP-CH7L8TQ9
+ lic: HOSTID: "f430b9ae4e60 00ff66c6b359 5413792f7072 005056c00001 005056c00008
+ lic: Using FLEXlm license file:
+ lic: 27000@localhost
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 31-dec-2028/2008.120
+ lic: FLOATING license(s) on SERVER localhost
+ lic:
+ init: begin read circuit files,  cpu clock=  1.10E-01
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\XILINX\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\TLINE\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\TI\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\SIGNET\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\PCI\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\LIN_TECH\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\FET\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\DIO\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\COMLINE\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\BURR_BRN\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\BJT\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
+       option post
+       option runlvl   =     6.00
+       option gmindc   =    1.000E-14
+       option scale    =    0.900
+       option post
+       option nomod
+ init: end read circuit files,  cpu clock=  1.80E-01 memory=    162 kb
+ init: begin check errors,  cpu clock=  1.80E-01
+ init: end check errors,  cpu clock=  2.00E-01 memory=    597 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  2.00E-01
+       establish matrix -- done,  cpu clock=  2.10E-01 memory=    629 kb
+       re-order matrix -- done,  cpu clock=  2.10E-01 memory=    640 kb
+ init: end setup matrix,  cpu clock=  2.20E-01 memory=    675 kb
+ dcop: begin dcop,  cpu clock=  2.20E-01
+ dcop: end dcop,  cpu clock=  2.40E-01 memory=    675 kb  tot_iter=      13
+ sweep: parameter       parameter1       begin, #sweeps =  11
+ parameter: tsu             =    8.00E-10
+ dcop: begin dcop,  cpu clock=  2.50E-01
+ dcop: end dcop,  cpu clock=  2.50E-01 memory=    675 kb  tot_iter=      26
+ output: d:\vlsi_homework\final\24t_csff\time_setup\pvt_2\24t_csff.tr0
+ sweep: tran tran1    begin, stop_t=  4.50E-07 #sweeps=**** cpu clock=  2.60E-01
+ tran: time= 4.5005E-08 tot_iter=     398 conv_iter=     153 cpu clock= 3.06E-01
+ tran: time= 9.0034E-08 tot_iter=    1156 conv_iter=     435 cpu clock= 3.70E-01
+ tran: time= 1.3546E-07 tot_iter=    1196 conv_iter=     455 cpu clock= 3.80E-01
+ tran: time= 1.8391E-07 tot_iter=    1206 conv_iter=     460 cpu clock= 3.96E-01
+ tran: time= 2.3398E-07 tot_iter=    1212 conv_iter=     463 cpu clock= 4.08E-01
+ tran: time= 2.7840E-07 tot_iter=    1216 conv_iter=     465 cpu clock= 4.20E-01
+ tran: time= 3.2340E-07 tot_iter=    1220 conv_iter=     467 cpu clock= 4.33E-01
+ tran: time= 3.6840E-07 tot_iter=    1224 conv_iter=     469 cpu clock= 4.40E-01
+ tran: time= 4.1340E-07 tot_iter=    1228 conv_iter=     471 cpu clock= 4.50E-01
+ tran: time= 4.5000E-07 tot_iter=    1232 conv_iter=     473 cpu clock= 4.60E-01
+ sweep: tran tran1    end,  cpu clock=  4.70E-01 memory=    676 kb
+ parameter: tsu             =    8.01E-10
+ dcop: begin dcop,  cpu clock=  4.81E-01
+ dcop: end dcop,  cpu clock=  4.86E-01 memory=    676 kb  tot_iter=      39
+ output: d:\vlsi_homework\final\24t_csff\time_setup\pvt_2\24t_csff.tr0
+ sweep: tran tran2    begin, stop_t=  4.50E-07 #sweeps=**** cpu clock=  4.90E-01
+ tran: time= 4.5004E-08 tot_iter=     398 conv_iter=     153 cpu clock= 5.30E-01
+ tran: time= 9.0148E-08 tot_iter=    1160 conv_iter=     436 cpu clock= 6.00E-01
+ tran: time= 1.3584E-07 tot_iter=    1206 conv_iter=     458 cpu clock= 6.10E-01
+ tran: time= 1.8378E-07 tot_iter=    1216 conv_iter=     463 cpu clock= 6.20E-01
+ tran: time= 2.3320E-07 tot_iter=    1222 conv_iter=     466 cpu clock= 6.30E-01
+ tran: time= 2.7733E-07 tot_iter=    1226 conv_iter=     468 cpu clock= 6.40E-01
+ tran: time= 3.2233E-07 tot_iter=    1230 conv_iter=     470 cpu clock= 6.50E-01
+ tran: time= 3.6733E-07 tot_iter=    1234 conv_iter=     472 cpu clock= 6.60E-01
+ tran: time= 4.1233E-07 tot_iter=    1238 conv_iter=     474 cpu clock= 6.81E-01
+ tran: time= 4.5000E-07 tot_iter=    1242 conv_iter=     476 cpu clock= 6.90E-01
+ sweep: tran tran2    end,  cpu clock=  7.00E-01 memory=    676 kb
+ parameter: tsu             =    8.02E-10
+ dcop: begin dcop,  cpu clock=  7.00E-01
+ dcop: end dcop,  cpu clock=  7.10E-01 memory=    676 kb  tot_iter=      52
+ output: d:\vlsi_homework\final\24t_csff\time_setup\pvt_2\24t_csff.tr0
+ sweep: tran tran3    begin, stop_t=  4.50E-07 #sweeps=**** cpu clock=  7.20E-01
+ tran: time= 4.5003E-08 tot_iter=     398 conv_iter=     153 cpu clock= 7.60E-01
+ tran: time= 9.0032E-08 tot_iter=    1135 conv_iter=     428 cpu clock= 8.21E-01
+ tran: time= 1.3889E-07 tot_iter=    1207 conv_iter=     460 cpu clock= 8.30E-01
+ tran: time= 1.8912E-07 tot_iter=    1217 conv_iter=     465 cpu clock= 8.40E-01
+ tran: time= 2.4104E-07 tot_iter=    1223 conv_iter=     468 cpu clock= 8.60E-01
+ tran: time= 2.8604E-07 tot_iter=    1227 conv_iter=     470 cpu clock= 8.70E-01
+ tran: time= 3.3104E-07 tot_iter=    1231 conv_iter=     472 cpu clock= 8.80E-01
+ tran: time= 3.7604E-07 tot_iter=    1235 conv_iter=     474 cpu clock= 8.90E-01
+ tran: time= 4.2104E-07 tot_iter=    1239 conv_iter=     476 cpu clock= 9.06E-01
+ tran: time= 4.5000E-07 tot_iter=    1243 conv_iter=     478 cpu clock= 9.21E-01
+ sweep: tran tran3    end,  cpu clock=  9.21E-01 memory=    676 kb
+ parameter: tsu             =    8.03E-10
+ dcop: begin dcop,  cpu clock=  9.31E-01
+ dcop: end dcop,  cpu clock=  9.31E-01 memory=    676 kb  tot_iter=      65
+ output: d:\vlsi_homework\final\24t_csff\time_setup\pvt_2\24t_csff.tr0
+ sweep: tran tran4    begin, stop_t=  4.50E-07 #sweeps=**** cpu clock=  9.40E-01
+ tran: time= 4.5002E-08 tot_iter=     398 conv_iter=     153 cpu clock= 9.86E-01
+ tran: time= 9.0034E-08 tot_iter=    1077 conv_iter=     408 cpu clock= 1.04E+00
+ tran: time= 1.4143E-07 tot_iter=    1213 conv_iter=     463 cpu clock= 1.06E+00
+ tran: time= 1.9255E-07 tot_iter=    1223 conv_iter=     468 cpu clock= 1.07E+00
+ tran: time= 2.2527E-07 tot_iter=    1227 conv_iter=     470 cpu clock= 1.08E+00
+ tran: time= 2.9037E-07 tot_iter=    1233 conv_iter=     473 cpu clock= 1.09E+00
+ tran: time= 3.3537E-07 tot_iter=    1237 conv_iter=     475 cpu clock= 1.10E+00
+ tran: time= 3.8037E-07 tot_iter=    1241 conv_iter=     477 cpu clock= 1.12E+00
+ tran: time= 4.2537E-07 tot_iter=    1245 conv_iter=     479 cpu clock= 1.13E+00
+ tran: time= 4.5000E-07 tot_iter=    1247 conv_iter=     480 cpu clock= 1.14E+00
+ sweep: tran tran4    end,  cpu clock=  1.15E+00 memory=    676 kb
+ parameter: tsu             =    8.04E-10
+ dcop: begin dcop,  cpu clock=  1.15E+00
+ dcop: end dcop,  cpu clock=  1.16E+00 memory=    676 kb  tot_iter=      78
+ output: d:\vlsi_homework\final\24t_csff\time_setup\pvt_2\24t_csff.tr0
+ sweep: tran tran5    begin, stop_t=  4.50E-07 #sweeps=**** cpu clock=  1.17E+00
+ tran: time= 4.5001E-08 tot_iter=     398 conv_iter=     153 cpu clock= 1.21E+00
+ tran: time= 9.0676E-08 tot_iter=    1056 conv_iter=     405 cpu clock= 1.26E+00
+ tran: time= 1.3607E-07 tot_iter=    1219 conv_iter=     468 cpu clock= 1.29E+00
+ tran: time= 1.8854E-07 tot_iter=    1231 conv_iter=     474 cpu clock= 1.30E+00
+ tran: time= 2.3656E-07 tot_iter=    1237 conv_iter=     477 cpu clock= 1.31E+00
+ tran: time= 2.8007E-07 tot_iter=    1241 conv_iter=     479 cpu clock= 1.32E+00
+ tran: time= 3.2507E-07 tot_iter=    1245 conv_iter=     481 cpu clock= 1.33E+00
+ tran: time= 3.7007E-07 tot_iter=    1249 conv_iter=     483 cpu clock= 1.35E+00
+ tran: time= 4.1507E-07 tot_iter=    1253 conv_iter=     485 cpu clock= 1.36E+00
+ tran: time= 4.5000E-07 tot_iter=    1257 conv_iter=     487 cpu clock= 1.37E+00
+ sweep: tran tran5    end,  cpu clock=  1.38E+00 memory=    676 kb
+ parameter: tsu             =    8.05E-10
+ dcop: begin dcop,  cpu clock=  1.39E+00
+ dcop: end dcop,  cpu clock=  1.39E+00 memory=    676 kb  tot_iter=      91
+ output: d:\vlsi_homework\final\24t_csff\time_setup\pvt_2\24t_csff.tr0
+ sweep: tran tran6    begin, stop_t=  4.50E-07 #sweeps=**** cpu clock=  1.40E+00
+ tran: time= 4.5000E-08 tot_iter=     398 conv_iter=     153 cpu clock= 1.44E+00
+ tran: time= 9.0027E-08 tot_iter=    1072 conv_iter=     408 cpu clock= 1.50E+00
+ tran: time= 1.3940E-07 tot_iter=    1274 conv_iter=     486 cpu clock= 1.53E+00
+ tran: time= 1.8624E-07 tot_iter=    1284 conv_iter=     491 cpu clock= 1.54E+00
+ tran: time= 2.3420E-07 tot_iter=    1290 conv_iter=     494 cpu clock= 1.55E+00
+ tran: time= 2.7764E-07 tot_iter=    1294 conv_iter=     496 cpu clock= 1.56E+00
+ tran: time= 3.2264E-07 tot_iter=    1298 conv_iter=     498 cpu clock= 1.58E+00
+ tran: time= 3.6764E-07 tot_iter=    1302 conv_iter=     500 cpu clock= 1.59E+00
+ tran: time= 4.1264E-07 tot_iter=    1306 conv_iter=     502 cpu clock= 1.60E+00
+ tran: time= 4.5000E-07 tot_iter=    1310 conv_iter=     504 cpu clock= 1.62E+00
+ sweep: tran tran6    end,  cpu clock=  1.62E+00 memory=    676 kb
+ parameter: tsu             =    8.06E-10
+ dcop: begin dcop,  cpu clock=  1.63E+00
+ dcop: end dcop,  cpu clock=  1.64E+00 memory=    676 kb  tot_iter=     104
+ output: d:\vlsi_homework\final\24t_csff\time_setup\pvt_2\24t_csff.tr0
+ sweep: tran tran7    begin, stop_t=  4.50E-07 #sweeps=**** cpu clock=  1.65E+00
+ tran: time= 4.5863E-08 tot_iter=     401 conv_iter=     154 cpu clock= 1.69E+00
+ tran: time= 9.0159E-08 tot_iter=    1209 conv_iter=     456 cpu clock= 1.75E+00
+ tran: time= 1.4035E-07 tot_iter=    1286 conv_iter=     490 cpu clock= 1.77E+00
+ tran: time= 1.9038E-07 tot_iter=    1296 conv_iter=     495 cpu clock= 1.78E+00
+ tran: time= 2.4170E-07 tot_iter=    1302 conv_iter=     498 cpu clock= 1.79E+00
+ tran: time= 2.8664E-07 tot_iter=    1306 conv_iter=     500 cpu clock= 1.80E+00
+ tran: time= 3.3164E-07 tot_iter=    1310 conv_iter=     502 cpu clock= 1.81E+00
+ tran: time= 3.7664E-07 tot_iter=    1314 conv_iter=     504 cpu clock= 1.82E+00
+ tran: time= 4.2164E-07 tot_iter=    1318 conv_iter=     506 cpu clock= 1.84E+00
+ tran: time= 4.5000E-07 tot_iter=    1322 conv_iter=     508 cpu clock= 1.85E+00
+ sweep: tran tran7    end,  cpu clock=  1.85E+00 memory=    676 kb
+ parameter: tsu             =    8.07E-10
+ dcop: begin dcop,  cpu clock=  1.86E+00
+ dcop: end dcop,  cpu clock=  1.87E+00 memory=    676 kb  tot_iter=     117
+ output: d:\vlsi_homework\final\24t_csff\time_setup\pvt_2\24t_csff.tr0
+ sweep: tran tran8    begin, stop_t=  4.50E-07 #sweeps=**** cpu clock=  1.88E+00
+ tran: time= 4.5862E-08 tot_iter=     401 conv_iter=     154 cpu clock= 1.92E+00
+ tran: time= 9.0026E-08 tot_iter=    1245 conv_iter=     471 cpu clock= 1.99E+00
+ tran: time= 1.4176E-07 tot_iter=    1314 conv_iter=     501 cpu clock= 2.00E+00
+ tran: time= 1.8080E-07 tot_iter=    1322 conv_iter=     505 cpu clock= 2.01E+00
+ tran: time= 2.2786E-07 tot_iter=    1328 conv_iter=     508 cpu clock= 2.03E+00
+ tran: time= 2.7094E-07 tot_iter=    1332 conv_iter=     510 cpu clock= 2.04E+00
+ tran: time= 3.1594E-07 tot_iter=    1336 conv_iter=     512 cpu clock= 2.05E+00
+ tran: time= 3.6094E-07 tot_iter=    1340 conv_iter=     514 cpu clock= 2.06E+00
+ tran: time= 4.0594E-07 tot_iter=    1344 conv_iter=     516 cpu clock= 2.08E+00
+ tran: time= 4.5000E-07 tot_iter=    1348 conv_iter=     518 cpu clock= 2.09E+00
+ sweep: tran tran8    end,  cpu clock=  2.10E+00 memory=    676 kb
+ parameter: tsu             =    8.08E-10
+ dcop: begin dcop,  cpu clock=  2.10E+00
+ dcop: end dcop,  cpu clock=  2.11E+00 memory=    676 kb  tot_iter=     130
+ output: d:\vlsi_homework\final\24t_csff\time_setup\pvt_2\24t_csff.tr0
+ sweep: tran tran9    begin, stop_t=  4.50E-07 #sweeps=**** cpu clock=  2.12E+00
+ tran: time= 4.5862E-08 tot_iter=     401 conv_iter=     154 cpu clock= 2.16E+00
+ tran: time= 9.0024E-08 tot_iter=    1217 conv_iter=     460 cpu clock= 2.22E+00
+ tran: time= 1.3578E-07 tot_iter=    1277 conv_iter=     487 cpu clock= 2.24E+00
+ tran: time= 1.8336E-07 tot_iter=    1287 conv_iter=     492 cpu clock= 2.25E+00
+ tran: time= 2.3221E-07 tot_iter=    1293 conv_iter=     495 cpu clock= 2.26E+00
+ tran: time= 2.7609E-07 tot_iter=    1297 conv_iter=     497 cpu clock= 2.27E+00
+ tran: time= 3.2109E-07 tot_iter=    1301 conv_iter=     499 cpu clock= 2.29E+00
+ tran: time= 3.6609E-07 tot_iter=    1305 conv_iter=     501 cpu clock= 2.30E+00
+ tran: time= 4.1109E-07 tot_iter=    1309 conv_iter=     503 cpu clock= 2.31E+00
+ tran: time= 4.5000E-07 tot_iter=    1313 conv_iter=     505 cpu clock= 2.32E+00
+ sweep: tran tran9    end,  cpu clock=  2.33E+00 memory=    676 kb
+ parameter: tsu             =    8.09E-10
+ dcop: begin dcop,  cpu clock=  2.34E+00
+ dcop: end dcop,  cpu clock=  2.34E+00 memory=    676 kb  tot_iter=     143
+ output: d:\vlsi_homework\final\24t_csff\time_setup\pvt_2\24t_csff.tr0
+ sweep: tran tran10   begin, stop_t=  4.50E-07 #sweeps=**** cpu clock=  2.35E+00
+ tran: time= 4.5861E-08 tot_iter=     401 conv_iter=     154 cpu clock= 2.39E+00
+ tran: time= 9.0169E-08 tot_iter=    1227 conv_iter=     464 cpu clock= 2.46E+00
+ tran: time= 1.3992E-07 tot_iter=    1284 conv_iter=     490 cpu clock= 2.47E+00
+ tran: time= 1.9216E-07 tot_iter=    1294 conv_iter=     495 cpu clock= 2.49E+00
+ tran: time= 2.2544E-07 tot_iter=    1298 conv_iter=     497 cpu clock= 2.50E+00
+ tran: time= 2.9091E-07 tot_iter=    1304 conv_iter=     500 cpu clock= 2.51E+00
+ tran: time= 3.3591E-07 tot_iter=    1308 conv_iter=     502 cpu clock= 2.52E+00
+ tran: time= 3.8091E-07 tot_iter=    1312 conv_iter=     504 cpu clock= 2.54E+00
+ tran: time= 4.2591E-07 tot_iter=    1316 conv_iter=     506 cpu clock= 2.55E+00
+ tran: time= 4.5000E-07 tot_iter=    1318 conv_iter=     507 cpu clock= 2.56E+00
+ sweep: tran tran10   end,  cpu clock=  2.57E+00 memory=    676 kb
+ parameter: tsu             =    8.10E-10
+ dcop: begin dcop,  cpu clock=  2.57E+00
+ dcop: end dcop,  cpu clock=  2.58E+00 memory=    676 kb  tot_iter=     156
+ output: d:\vlsi_homework\final\24t_csff\time_setup\pvt_2\24t_csff.tr0
+ sweep: tran tran11   begin, stop_t=  4.50E-07 #sweeps=**** cpu clock=  2.59E+00
+ tran: time= 4.5859E-08 tot_iter=     401 conv_iter=     154 cpu clock= 2.63E+00
+ tran: time= 9.0218E-08 tot_iter=    1230 conv_iter=     464 cpu clock= 2.69E+00
+ tran: time= 1.3601E-07 tot_iter=    1282 conv_iter=     488 cpu clock= 2.71E+00
+ tran: time= 1.8479E-07 tot_iter=    1292 conv_iter=     493 cpu clock= 2.72E+00
+ tran: time= 2.3499E-07 tot_iter=    1298 conv_iter=     496 cpu clock= 2.73E+00
+ tran: time= 2.7944E-07 tot_iter=    1302 conv_iter=     498 cpu clock= 2.75E+00
+ tran: time= 3.2444E-07 tot_iter=    1306 conv_iter=     500 cpu clock= 2.76E+00
+ tran: time= 3.6944E-07 tot_iter=    1310 conv_iter=     502 cpu clock= 2.77E+00
+ tran: time= 4.1444E-07 tot_iter=    1314 conv_iter=     504 cpu clock= 2.79E+00
+ tran: time= 4.5000E-07 tot_iter=    1318 conv_iter=     506 cpu clock= 2.80E+00
+ sweep: tran tran11   end,  cpu clock=  2.80E+00 memory=    676 kb
+ sweep: parameter       parameter       1 end
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)
