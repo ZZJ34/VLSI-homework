@@ -1,0 +1,4 @@
+$DATA1 SOURCE='HSPICE' VERSION='C-2009.09 32-BIT'
+.TITLE '24t-tgff'
+ tclk2q           temper           alter#            
+  1.003e-10          0.               1.0000         
