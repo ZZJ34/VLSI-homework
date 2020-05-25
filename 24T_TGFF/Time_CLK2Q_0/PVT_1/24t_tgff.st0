@@ -1,0 +1,58 @@
+***** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******
+ Input File: d:\vlsi_homework\final\24t_tgff\time_clk2q_0\pvt_1\24t_tgff.sp
+ lic:
+ lic: FLEXlm: v8.5b
+ lic: USER:    ZZJ                 HOSTNAME: LAPTOP-CH7L8TQ9
+ lic: HOSTID: "f430b9ae4e60 00ff66c6b359 5413792f7072 005056c00001 005056c00008
+ lic: Using FLEXlm license file:
+ lic: 27000@localhost
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 31-dec-2028/2008.120
+ lic: FLOATING license(s) on SERVER localhost
+ lic:
+ init: begin read circuit files,  cpu clock=  9.20E-02
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\XILINX\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\TLINE\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\TI\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\SIGNET\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\PCI\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\LIN_TECH\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\FET\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\DIO\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\COMLINE\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\BURR_BRN\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\BJT\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
+       option post
+       option runlvl   =     6.00
+       option gmindc   =    1.000E-14
+       option scale    =    0.900
+       option post
+       option nomod
+ init: end read circuit files,  cpu clock=  1.44E-01 memory=    163 kb
+ init: begin check errors,  cpu clock=  1.44E-01
+ init: end check errors,  cpu clock=  1.74E-01 memory=    598 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  1.74E-01
+       establish matrix -- done,  cpu clock=  1.84E-01 memory=    630 kb
+       re-order matrix -- done,  cpu clock=  1.84E-01 memory=    640 kb
+ init: end setup matrix,  cpu clock=  1.93E-01 memory=    674 kb
+ dcop: begin dcop,  cpu clock=  2.04E-01
+ dcop: end dcop,  cpu clock=  2.13E-01 memory=    674 kb  tot_iter=      10
+ output: d:\vlsi_homework\final\24t_tgff\time_clk2q_0\pvt_1\24t_tgff.mt0
+ sweep: tran tran0    begin, stop_t=  7.00E-07 #sweeps=**** cpu clock=  2.24E-01
+ tran: time= 8.8012E-08 tot_iter=     528 conv_iter=     210 cpu clock= 2.78E-01
+ tran: time= 1.4261E-07 tot_iter=     944 conv_iter=     368 cpu clock= 3.13E-01
+ tran: time= 2.1032E-07 tot_iter=    1305 conv_iter=     507 cpu clock= 3.66E-01
+ tran: time= 2.8791E-07 tot_iter=    1387 conv_iter=     541 cpu clock= 3.87E-01
+ tran: time= 3.7095E-07 tot_iter=    1393 conv_iter=     544 cpu clock= 4.04E-01
+ tran: time= 4.4095E-07 tot_iter=    1397 conv_iter=     546 cpu clock= 4.21E-01
+ tran: time= 5.1095E-07 tot_iter=    1401 conv_iter=     548 cpu clock= 4.38E-01
+ tran: time= 5.8095E-07 tot_iter=    1405 conv_iter=     550 cpu clock= 4.54E-01
+ tran: time= 6.5095E-07 tot_iter=    1409 conv_iter=     552 cpu clock= 4.71E-01
+ tran: time= 7.0000E-07 tot_iter=    1413 conv_iter=     554 cpu clock= 4.88E-01
+ sweep: tran tran0    end,  cpu clock=  4.94E-01 memory=    675 kb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)
