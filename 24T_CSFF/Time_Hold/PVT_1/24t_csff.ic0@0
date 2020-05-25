@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "C-2009.09 32-BIT"
 * "format" "HSP"
-* "rundate" "10:47:18 05/25/2020 "
+* "rundate" "12:30:35 05/25/2020 "
 * "netlist" "d:\vlsi_homework\final\24t_csff\time_hold\pvt_1\24t_csff.sp "
 * "runtitle" "24t-csff"
 * time =    0.            

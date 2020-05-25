@@ -34,7 +34,7 @@
         9 x_master_i1.                    inv_d              1.00 
        19 x_slave_i2.                     inv_d              1.00 
        20 x_slave_i3.                     inv_d              1.00 
-  **warning** (d:\vlsi_homework\final\24t_csff\time_hold\pvt_1\24t_csff.sp:34) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
+  **warning** (d:\vlsi_homework\final\24t_csff\time_hold\pvt_1\24t_csff.sp:32) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
  
       
  **diagnostic** set option symb=1 internally to help for convergence.
@@ -112,8 +112,8 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.09           1         168
-  transient          1.95    49500011       10741        4326 rev=       283
+  op point           0.11           1         168
+  transient          3.23    66000011       25018        9727 rev=       493
   readin             0.08
   errchk             0.02
   setup              0.02
@@ -121,10 +121,10 @@
 
 
            total memory used          676  kbytes
-           total cpu time            2.38 seconds
-           total elapsed time        2.45 seconds
-           job started at     10:47:18 05/25/2020
-           job ended   at     10:47:20 05/25/2020
+           total cpu time            3.69 seconds
+           total elapsed time        3.78 seconds
+           job started at     12:30:35 05/25/2020
+           job ended   at     12:30:39 05/25/2020
 
 
   lic: Release hspice token(s) 
