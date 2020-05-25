@@ -28,20 +28,20 @@ VVNW VNW 0 'SUPPLY'
 VVSS VSS 0 0
 
 
-* 时钟信号为幅值1.1v 周期3ns 占空比50% 保持不变
-VIN1 CK 0 PULSE 0V 'SUPPLY' 0 0.01n 0.01n 1.5n 3n
-* 输入信号为幅值1.1v 周期8ns 占空比50% 
+* 时钟信号为幅值1.1v 周期3ns 占空比50% 保持不变 10MHz
+VIN1 CK 0 PULSE 0V 'SUPPLY' 0 0.01n 0.01n 50n 100n
+* 输入信号为幅值1.1v 周期8ns 占空比50% 2MHz
 
 .alter static
-VIN IN  VSS PULSE 0V 0V 2n 0.1n 0.1n 4n 8n
-.MEASURE TRAN 'p_avg' AVG POWER from=0n to=200n 
-.tran 0.001n 200n 
+VIN IN  VSS PULSE 0V 0V 0n 0.1n 0.1n 250n 500n
+.MEASURE TRAN 'p_avg' AVG POWER from=0n to=100u 
+.tran 0.01n 100u 
 
 
 .alter dynamic
-VIN IN  VSS PULSE 0V 'SUPPLY' 2n 0.1n 0.1n 5n 10n
-.MEASURE TRAN 'p_avg' AVG POWER from=0n to=200n 
-.tran 0.001n 200n 
+VIN IN  VSS PULSE 0V 'SUPPLY' 0n 0.1n 0.1n 250n 500n
+.MEASURE TRAN 'p_avg' AVG POWER from=0n to=100u 
+.tran 0.01n 100u 
 
 
 .end

@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "C-2009.09 32-BIT"
 * "format" "HSP"
-* "rundate" "21:41:44 05/24/2020 "
+* "rundate" "23:16:42 05/25/2020 "
 * "netlist" "d:\vlsi_homework\final\24t_csff\power_consumption\pvt_2\24t_csff.sp "
 * "runtitle" "dynamic"
 * time =    0.            

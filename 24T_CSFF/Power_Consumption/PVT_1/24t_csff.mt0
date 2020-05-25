@@ -1,4 +1,4 @@
 $DATA1 SOURCE='HSPICE' VERSION='C-2009.09 32-BIT'
 .TITLE 'static'
  p_avg            temper           alter#            
-  2.337e-08         70.0000           2.0000         
+  2.134e-10         70.0000           2.0000         

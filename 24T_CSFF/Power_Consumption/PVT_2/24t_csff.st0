@@ -10,7 +10,7 @@
  lic: License/Maintenance for hspice will expire on 31-dec-2028/2008.120
  lic: FLOATING license(s) on SERVER localhost
  lic:
- init: begin read circuit files,  cpu clock=  9.80E-02
+ init: begin read circuit files,  cpu clock=  1.03E-01
        option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
        option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
        option search   = F:\synopsys\Hspice_C-2009.09\PARTS\XILINX\
@@ -32,18 +32,18 @@
        option scale    =    0.900
        option post
        option nomod
- init: end read circuit files,  cpu clock=  1.79E-01 memory=    162 kb
- init: begin check errors,  cpu clock=  1.79E-01
+ init: end read circuit files,  cpu clock=  1.81E-01 memory=    162 kb
+ init: begin check errors,  cpu clock=  1.81E-01
  **warning**  no dc path to ground from node        0:                in
- init: end check errors,  cpu clock=  2.11E-01 memory=    597 kb
- init: begin setup matrix, pivot=     0 cpu clock=  2.11E-01
-       establish matrix -- done,  cpu clock=  2.23E-01 memory=    629 kb
-       re-order matrix -- done,  cpu clock=  2.28E-01 memory=    641 kb
- init: end setup matrix,  cpu clock=  2.34E-01 memory=    676 kb
- dcop: begin dcop,  cpu clock=  2.39E-01
- dcop: end dcop,  cpu clock=  2.53E-01 memory=    676 kb  tot_iter=      28
+ init: end check errors,  cpu clock=  2.07E-01 memory=    597 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  2.07E-01
+       establish matrix -- done,  cpu clock=  2.17E-01 memory=    629 kb
+       re-order matrix -- done,  cpu clock=  2.17E-01 memory=    641 kb
+ init: end setup matrix,  cpu clock=  2.27E-01 memory=    676 kb
+ dcop: begin dcop,  cpu clock=  2.27E-01
+ dcop: end dcop,  cpu clock=  2.47E-01 memory=    676 kb  tot_iter=      28
 >info:         ***** hspice job concluded
- init: begin read circuit files,  cpu clock=  3.00E-01
+ init: begin read circuit files,  cpu clock=  2.87E-01
        option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
        option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
        option search   = F:\synopsys\Hspice_C-2009.09\PARTS\XILINX\
@@ -65,18 +65,71 @@
        option scale    =    0.900
        option post
        option nomod
- init: end read circuit files,  cpu clock=  4.20E-01 memory=    162 kb
- init: begin check errors,  cpu clock=  4.20E-01
- init: end check errors,  cpu clock=  4.44E-01 memory=    560 kb
- init: begin setup matrix, pivot=     0 cpu clock=  4.44E-01
-       establish matrix -- done,  cpu clock=  4.57E-01 memory=    592 kb
-       re-order matrix -- done,  cpu clock=  4.62E-01 memory=    603 kb
- init: end setup matrix,  cpu clock=  4.70E-01 memory=    637 kb
- dcop: begin dcop,  cpu clock=  4.76E-01
- dcop: end dcop,  cpu clock=  4.88E-01 memory=    637 kb  tot_iter=      13
+ init: end read circuit files,  cpu clock=  4.07E-01 memory=    162 kb
+ init: begin check errors,  cpu clock=  4.07E-01
+ init: end check errors,  cpu clock=  4.37E-01 memory=    560 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  4.37E-01
+       establish matrix -- done,  cpu clock=  4.47E-01 memory=    592 kb
+       re-order matrix -- done,  cpu clock=  4.47E-01 memory=    603 kb
+ init: end setup matrix,  cpu clock=  4.57E-01 memory=    637 kb
+ dcop: begin dcop,  cpu clock=  4.67E-01
+ dcop: end dcop,  cpu clock=  4.77E-01 memory=    637 kb  tot_iter=      13
  output: d:\vlsi_homework\final\24t_csff\power_consumption\pvt_2\24t_csff.mt0
- sweep: tran tran0    begin, stop_t=  2.00E-07 #sweeps=**** cpu clock=  5.03E-01
- tran: time= 2.0089E-08 tot_iter=    1564 conv_iter=     588 cpu clock= 6.35E-01
- tran: time= 4.0256E-08 tot_iter=    2953 conv_iter=    1129 cpu clock= 7.55E-01
- tran: time= 6.0000E-08 tot_iter=    4343 conv_iter=    1671 cpu clock= 8.75E-01
- tran: time= 8.0070E-08 tot_iter=    5827 conv_iter=    2248 cpu clock= 1.01E+00
+ sweep: tran tran0    begin, stop_t=  1.00E-04 #sweeps=**** cpu clock=  4.87E-01
+ tran: time= 1.0000E-05 tot_iter=   20335 conv_iter=    7951 cpu clock= 1.94E+00
+ tran: time= 2.0000E-05 tot_iter=   40235 conv_iter=   15751 cpu clock= 3.46E+00
+ tran: time= 3.0000E-05 tot_iter=   60137 conv_iter=   23552 cpu clock= 4.90E+00
+ tran: time= 4.0000E-05 tot_iter=   80035 conv_iter=   31351 cpu clock= 6.28E+00
+ tran: time= 5.0000E-05 tot_iter=   99935 conv_iter=   39151 cpu clock= 7.74E+00
+ tran: time= 6.0000E-05 tot_iter=  119835 conv_iter=   46951 cpu clock= 9.33E+00
+ tran: time= 7.0000E-05 tot_iter=  139735 conv_iter=   54751 cpu clock= 1.08E+01
+ tran: time= 8.0000E-05 tot_iter=  159635 conv_iter=   62551 cpu clock= 1.22E+01
+ tran: time= 9.0000E-05 tot_iter=  179535 conv_iter=   70351 cpu clock= 1.39E+01
+ tran: time= 1.0000E-04 tot_iter=  199435 conv_iter=   78151 cpu clock= 1.53E+01
+ sweep: tran tran0    end,  cpu clock=  1.53E+01 memory=    671 kb
+>info:         ***** hspice job concluded
+ init: begin read circuit files,  cpu clock=  1.54E+01
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\XILINX\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\TLINE\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\TI\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\SIGNET\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\PCI\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\LIN_TECH\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\FET\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\DIO\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\COMLINE\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\BURR_BRN\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\BJT\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
+       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
+       option post
+       option runlvl   =     6.00
+       option gmindc   =    1.000E-14
+       option scale    =    0.900
+       option post
+       option nomod
+ init: end read circuit files,  cpu clock=  1.55E+01 memory=    162 kb
+ init: begin check errors,  cpu clock=  1.55E+01
+ init: end check errors,  cpu clock=  1.55E+01 memory=    560 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  1.55E+01
+       establish matrix -- done,  cpu clock=  1.55E+01 memory=    592 kb
+       re-order matrix -- done,  cpu clock=  1.55E+01 memory=    603 kb
+ init: end setup matrix,  cpu clock=  1.55E+01 memory=    638 kb
+ dcop: begin dcop,  cpu clock=  1.55E+01
+ dcop: end dcop,  cpu clock=  1.55E+01 memory=    638 kb  tot_iter=      13
+ output: d:\vlsi_homework\final\24t_csff\power_consumption\pvt_2\24t_csff.mt1
+ sweep: tran tran0    begin, stop_t=  1.00E-04 #sweeps=**** cpu clock=  1.55E+01
+ tran: time= 1.0000E-05 tot_iter=   47826 conv_iter=   16775 cpu clock= 1.91E+01
+ tran: time= 2.0000E-05 tot_iter=   95708 conv_iter=   33571 cpu clock= 2.28E+01
+ tran: time= 3.0000E-05 tot_iter=  143604 conv_iter=   50375 cpu clock= 2.63E+01
+ tran: time= 4.0000E-05 tot_iter=  191484 conv_iter=   67170 cpu clock= 3.00E+01
+ tran: time= 5.0000E-05 tot_iter=  239380 conv_iter=   83974 cpu clock= 3.36E+01
+ tran: time= 6.0000E-05 tot_iter=  287285 conv_iter=  100782 cpu clock= 3.71E+01
+ tran: time= 7.0000E-05 tot_iter=  335156 conv_iter=  117573 cpu clock= 4.08E+01
+ tran: time= 8.0000E-05 tot_iter=  383061 conv_iter=  134381 cpu clock= 4.44E+01
+ tran: time= 9.0000E-05 tot_iter=  430932 conv_iter=  151172 cpu clock= 4.79E+01
+ sweep: tran tran0    end,  cpu clock=  5.16E+01 memory=    704 kb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)
