@@ -5,7 +5,7 @@
   terms and conditions of the license agreement from Synopsys.
   Use of this program is your acceptance to be bound by the 
   license agreement. HSPICE is the trademark of Synopsys, Inc.
-  Input File: d:\vlsi_homework\final\24t_tgff\time_clk2q_1\pvt_1\24t_tgff.sp    
+  Input File: d:\vlsi_homework\final\24t_csff\time_clk2q_1\pvt_1\24t_csff.sp    
   lic:  
   lic: FLEXlm: v8.5b 
   lic: USER:    ZZJ                 HOSTNAME: LAPTOP-CH7L8TQ9 
@@ -23,7 +23,7 @@
 
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
  ******  
- 24t-tgff
+ 24t-csff
 
   ******  circuit name directory
  circuit number to circuit name directory
@@ -31,19 +31,10 @@
         0 main circuit
         1 x_inv1.                         inv_test           1.00 
         2 x_inv2.                         inv_test           1.00 
-        3 x_clk1.                         inv_d              1.00 
-        4 x_clk2.                         inv_d              1.00 
-        5 x_master_inv_1.                 inv_d              1.00 
-        6 x_master_tg_1.                  tg                 1.00 
-        7 x_master_inv_2.                 inv_d              1.00 
-        8 x_master_inv_3.                 inv_d              1.00 
-        9 x_master_tg_2.                  tg                 1.00 
-       10 x_slave_tg_1.                   tg                 1.00 
-       11 x_slave_inv_1.                  inv_d              1.00 
-       12 x_slave_inv_2.                  inv_d              1.00 
-       13 x_slave_inv_3.                  inv_d              1.00 
-       14 x_slave_tg_2.                   tg                 1.00 
-  **warning** (d:\vlsi_homework\final\24t_tgff\time_clk2q_1\pvt_1\24t_tgff.sp:31) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
+        9 x_master_i1.                    inv_d              1.00 
+       19 x_slave_i2.                     inv_d              1.00 
+       20 x_slave_i3.                     inv_d              1.00 
+  **warning** (d:\vlsi_homework\final\24t_csff\time_clk2q_1\pvt_1\24t_csff.sp:31) dc voltage reset to initial transient source value              in source        0:vin1                new dc=  0.0000D+00
  
       
  **diagnostic** set option symb=1 internally to help for convergence.
@@ -52,33 +43,34 @@
  ******
  runlvl  = 6         bypass  = 2         
   Opening plot unit= 79
- file=d:\vlsi_homework\final\24t_tgff\time_clk2q_1\pvt_1\24t_tgff.pa0          
+ file=d:\vlsi_homework\final\24t_csff\time_clk2q_1\pvt_1\24t_csff.pa0          
 
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
  ******  
- 24t-tgff
+ 24t-csff
 
   ******  operating point information tnom=  25.000 temp=  70.000 *****
  ***** operating point status is voltage   simulation time is     0.     
      node    =voltage       node    =voltage       node    =voltage
 
- + 0:1       = 499.9986m  0:2       = 499.9985m  0:3       =  11.7923u
- + 0:4       = 499.9986m  0:5       = 271.1950m  0:6       = 271.1246m
- + 0:7       = 271.3204m  0:cki     =  10.5126u  0:ckn     = 499.9986m
- + 0:clk     =   0.       0:d       =   6.2278u  0:in      =   0.     
- + 0:q       = 271.6447m  0:test_1  = 499.9978m  0:vdd     = 500.0000m
+ + 0:ck      =   0.       0:cs      = 499.9999m  0:csu_1   = 187.4928m
+ + 0:csu_2   = 373.9437m  0:csu_3   = 187.1274m  0:d       =   6.2261u
+ + 0:di      =  10.5012u  0:dn      = 499.9923m  0:in      =   0.     
+ + 0:master_1= 499.9962m  0:master_2= 499.9971m  0:q       = 273.6171m
+ + 0:qi      = 273.6179m  0:qn      = 270.8581m  0:slave_1 =  39.6883m
+ + 0:slave_2 = 305.2740m  0:test_1  = 499.9978m  0:vdd     = 500.0000m
  + 0:vnw     = 500.0000m  0:vpw     =   0.       0:vss     =   0.     
 
  ******  
- 24t-tgff
+ 24t-csff
 
   ******  transient analysis tnom=  25.000 temp=  70.000 *****
-   tclk2q=  1.0040E-08  targ=  2.1004E-07   trig=  2.0000E-07
+   tclk2q=  1.0609E-08  targ=  2.1061E-07   trig=  2.0000E-07
 
           ***** job concluded
 1****** HSPICE -- C-2009.09 32-BIT (Aug 24 2009) winnt ******                   
  ******  
- 24t-tgff
+ 24t-csff
 
   ******  job statistics summary tnom=  25.000 temp=  70.000 *****
 
@@ -91,7 +83,7 @@
 
 
   ******  Circuit Statistics  ******
-  # nodes       =      75 # elements   =      35
+  # nodes       =      78 # elements   =      35
   # resistors   =       0 # capacitors =       1 # inductors   =       0
   # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
   # cccs        =       0 # ccvs       =       0 # volt_srcs   =       6
@@ -104,19 +96,19 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.01           1          10
-  transient          0.26     7000001        1422         560 rev=        36
-  readin             0.08
+  op point           0.01           1          14
+  transient          0.30     7000001        1804         715 rev=        36
+  readin             0.09
   errchk             0.02
   setup              0.02
   output             0.00
 
 
-           total memory used          675  kbytes
-           total cpu time            0.44 seconds
-           total elapsed time        0.53 seconds
-           job started at     21:42:56 05/25/2020
-           job ended   at     21:42:56 05/25/2020
+           total memory used          676  kbytes
+           total cpu time            0.48 seconds
+           total elapsed time        0.56 seconds
+           job started at     21:41:44 05/25/2020
+           job ended   at     21:41:45 05/25/2020
 
 
   lic: Release hspice token(s) 

@@ -16,9 +16,8 @@
 + T = 0.0001n
 + Wp = '2.3675*Wn'
 + Wn = 1.1e-07
-+ T_Setup = Tsu
 .temp 70
-.global VSS VDD  VPW VNW COM1
+.global VSS VDD  VPW VNW 
 .op vol
 
 
@@ -32,11 +31,11 @@ VVSS VSS 0 0
 VIN1 CK 0 PWL 0n 0V 10n 0V 10.001n 'SUPPLY' 50n 'SUPPLY' 50.001n 0V 100n 0V 100.01n 'SUPPLY' 140n 'SUPPLY' 140.001n 0V 200n 0V 200.001n 'SUPPLY'
 
 *VIN1 CK 0 PWL 0n 0V 200n 0V 200.001n 'SUPPLY' 
-VIN2 IN 0 PWL 0n 0V  '200ns-T_Setup' 0V '200ns-T_Setup+0.001ns' 'SUPPLY'
+VIN2 IN 0 PWL 0n 0V 170n 0V 170.001n 'SUPPLY'
 
 .TRAN 0.0001n 700n 
-+ START=Tsu   
-+ SWEEP Tsu 5805ps 5815ps 1ps
+.MEASURE TRAN 'Tclk2q' TRIG v(ck) val='0.5*SUPPLY' RISE=3 
++                      targ v(q)  val='0.5*SUPPLY' rise=1
 
 .probe tran v(in) v(ck) c(q)
 

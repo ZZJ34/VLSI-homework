@@ -1,0 +1,34 @@
+* "simulator" "HSPICE" 
+* "version" "C-2009.09 32-BIT"
+* "format" "HSP"
+* "rundate" "21:41:44 05/25/2020 "
+* "netlist" "d:\vlsi_homework\final\24t_csff\time_clk2q_1\pvt_1\24t_csff.sp "
+* "runtitle" "24t-csff"
+* time =    0.            
+* temperature =   70.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=  10.0000f       
+.nodeset
++ ck =   0.            
++ cs = 499.9999m       
++ csu_1 = 187.4928m       
++ csu_2 = 373.9437m       
++ csu_3 = 187.1274m       
++ d =   6.2261u       
++ di =  10.5012u       
++ dn = 499.9923m       
++ in =   0.            
++ master_1 = 499.9962m       
++ master_2 = 499.9971m       
++ q = 273.6171m       
++ qi = 273.6179m       
++ qn = 270.8581m       
++ slave_1 =  39.6883m       
++ slave_2 = 305.2740m       
++ test_1 = 499.9978m       
++ vdd = 500.0000m       
++ vnw = 500.0000m       
++ vpw =   0.            
++ vss =   0.            
+***   END: Saved Operating Point ***                     
