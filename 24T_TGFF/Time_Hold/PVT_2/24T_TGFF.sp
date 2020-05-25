@@ -1,5 +1,5 @@
-24T-CSFF
-* 新24 管 D 触发器仿真文件
+24T-TGFF
+* 24 管 D 触发器仿真文件
 
 *选择 TT, FF, SS三种模式进行仿真
 .prot
@@ -7,9 +7,9 @@
 .unprot
 
 * 测试电路网表
-.inc 'D:\VLSI_homework\final\24T_CSFF\TEST_CIRCUIT.net'
+.inc 'D:\VLSI_homework\final\24T_TGFF\TEST_CIRCUIT.net'
 * 仿真电路网表
-.inc 'D:\VLSI_homework\final\24T_CSFF\24T_CSFF.net'
+.inc 'D:\VLSI_homework\final\24T_TGFF\24T_TGFF.net'
 
 .option post nomod 
 .param SUPPLY = 0.55V
@@ -29,13 +29,13 @@ VVNW VNW 0 'SUPPLY'
 VVSS VSS 0 0
 
 
-VIN1 CK 0 PWL 0n 0V 10n 0V 10.001n 'SUPPLY' 50n 'SUPPLY' 50.001n 0V 80n 0V 80.001n 'SUPPLY' 
-VIN2 IN 0 PWL 0n 0V 60n 0v 60.001n 'SUPPLY' '79.25ns+T_hold' 'SUPPLY' '79.25ns+T_hold+0.001ns' 0V
+VIN1 CLK 0 PWL 0n 0V 10n 0V 10.001n 'SUPPLY' 50n 'SUPPLY' 50.001n 0V 80n 0V 80.001n 'SUPPLY' 
+VIN2 IN 0 PWL 0n 0V 60n 0v 60.001n 'SUPPLY' '79.49ns+T_hold' 'SUPPLY' '79.49ns+T_hold+0.001ns' 0V
 
 
 .TRAN 0.0001n 450n 
 + START=Thold   
-+ SWEEP Thold 0ns 50ps 1ps
++ SWEEP Thold 0ns 10ps 1ps
 
 .probe tran v(in) v(ck) c(q)
 
