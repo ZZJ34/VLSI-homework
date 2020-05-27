@@ -5,7 +5,7 @@
 * "netlist" "d:\vlsi_homework\final\inv_test\inv_test.sp "
 * "runtitle" "inv_test"
 * time =    0.            
-* temperature =   25.0000        
+* temperature =  -10.0000        
 *** BEGIN: Saved Operating Point ***                     
 .option 
 + gmindc=  10.0000f       
@@ -13,7 +13,7 @@
 + 1 =   1.1000        
 + in =   0.            
 + out =   1.1000        
-+ test_in = 238.5046n       
++ test_in =  40.0131n       
 + vdd =   1.1000        
 + vnw =   1.1000        
 + vpw =   0.            

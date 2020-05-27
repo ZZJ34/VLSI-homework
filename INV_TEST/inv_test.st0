@@ -10,7 +10,7 @@
  lic: License/Maintenance for hspice will expire on 31-dec-2028/2008.120
  lic: FLOATING license(s) on SERVER localhost
  lic:
- init: begin read circuit files,  cpu clock=  1.12E-01
+ init: begin read circuit files,  cpu clock=  8.80E-02
        option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
        option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
        option search   = F:\synopsys\Hspice_C-2009.09\PARTS\XILINX\
@@ -31,211 +31,208 @@
        option gmindc   =    1.000E-14
        option scale    =    0.900
        option post
- init: end read circuit files,  cpu clock=  1.76E-01 memory=    162 kb
- init: begin check errors,  cpu clock=  1.76E-01
- **warning**  no dc path to ground from node        0:                in
- init: end check errors,  cpu clock=  2.10E-01 memory=    433 kb
- init: begin setup matrix, pivot=     0 cpu clock=  2.10E-01
-       establish matrix -- done,  cpu clock=  2.20E-01 memory=    440 kb
-       re-order matrix -- done,  cpu clock=  2.26E-01 memory=    442 kb
- init: end setup matrix,  cpu clock=  2.32E-01 memory=    457 kb
- dcop: begin dcop,  cpu clock=  2.37E-01
- dcop: end dcop,  cpu clock=  2.48E-01 memory=    457 kb  tot_iter=       8
->info:         ***** hspice job concluded
- init: begin read circuit files,  cpu clock=  2.87E-01
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\XILINX\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\TLINE\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\TI\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\SIGNET\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\PCI\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\LIN_TECH\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\FET\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\DIO\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\COMLINE\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\BURR_BRN\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\BJT\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
-       option post
-       option runlvl   =     6.00
-       option gmindc   =    1.000E-14
-       option scale    =    0.900
-       option post
-       option gmindc   =    1.000E-14
-       option scale    =    0.900
- init: end read circuit files,  cpu clock=  4.11E-01 memory=    162 kb
- init: begin check errors,  cpu clock=  4.11E-01
- init: end check errors,  cpu clock=  4.40E-01 memory=    425 kb
- init: begin setup matrix, pivot=     0 cpu clock=  4.40E-01
-       establish matrix -- done,  cpu clock=  4.51E-01 memory=    433 kb
-       re-order matrix -- done,  cpu clock=  4.56E-01 memory=    435 kb
- init: end setup matrix,  cpu clock=  4.61E-01 memory=    449 kb
- dcop: begin dcop,  cpu clock=  4.70E-01
- dcop: end dcop,  cpu clock=  4.82E-01 memory=    449 kb  tot_iter=       4
+ init: end read circuit files,  cpu clock=  1.58E-01 memory=    162 kb
+ init: begin check errors,  cpu clock=  1.58E-01
+ init: end check errors,  cpu clock=  1.90E-01 memory=    434 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  1.90E-01
+       establish matrix -- done,  cpu clock=  2.01E-01 memory=    442 kb
+       re-order matrix -- done,  cpu clock=  2.06E-01 memory=    444 kb
+ init: end setup matrix,  cpu clock=  2.13E-01 memory=    458 kb
+ dcop: begin dcop,  cpu clock=  2.18E-01
+ dcop: end dcop,  cpu clock=  2.30E-01 memory=    458 kb  tot_iter=       4
+ sweep: temperature     temperature1     begin, #sweeps =  12
+ temperature: temperature=   -1.00E+01
+ dcop: begin dcop,  cpu clock=  2.45E-01
+ dcop: end dcop,  cpu clock=  2.55E-01 memory=    458 kb  tot_iter=       8
  output: d:\vlsi_homework\final\inv_test\inv_test.mt0
- sweep: tran tran0    begin, stop_t=  2.00E-07 #sweeps=**** cpu clock=  4.94E-01
- tran: time= 2.4998E-08 tot_iter=      20 conv_iter=      10 cpu clock= 4.99E-01
- tran: time= 4.4998E-08 tot_iter=      24 conv_iter=      12 cpu clock= 5.05E-01
- tran: time= 6.4998E-08 tot_iter=      28 conv_iter=      14 cpu clock= 5.12E-01
- tran: time= 8.4998E-08 tot_iter=      32 conv_iter=      16 cpu clock= 5.19E-01
- tran: time= 1.0500E-07 tot_iter=      36 conv_iter=      18 cpu clock= 5.25E-01
- tran: time= 1.2500E-07 tot_iter=      40 conv_iter=      20 cpu clock= 5.31E-01
- tran: time= 1.4500E-07 tot_iter=      44 conv_iter=      22 cpu clock= 5.37E-01
- tran: time= 1.6500E-07 tot_iter=      48 conv_iter=      24 cpu clock= 5.42E-01
- tran: time= 1.8500E-07 tot_iter=      52 conv_iter=      26 cpu clock= 5.48E-01
- tran: time= 2.0000E-07 tot_iter=      56 conv_iter=      28 cpu clock= 5.53E-01
- sweep: tran tran0    end,  cpu clock=  5.57E-01 memory=    450 kb
->info:         ***** hspice job concluded
- init: begin read circuit files,  cpu clock=  6.15E-01
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\XILINX\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\TLINE\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\TI\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\SIGNET\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\PCI\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\LIN_TECH\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\FET\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\DIO\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\COMLINE\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\BURR_BRN\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\BJT\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
-       option post
-       option runlvl   =     6.00
-       option gmindc   =    1.000E-14
-       option scale    =    0.900
-       option post
-       option gmindc   =    1.000E-14
-       option scale    =    0.900
-       option gmindc   =    1.000E-14
-       option scale    =    0.900
- init: end read circuit files,  cpu clock=  7.56E-01 memory=    162 kb
- init: begin check errors,  cpu clock=  7.56E-01
- init: end check errors,  cpu clock=  7.86E-01 memory=    425 kb
- init: begin setup matrix, pivot=     0 cpu clock=  7.86E-01
-       establish matrix -- done,  cpu clock=  7.98E-01 memory=    433 kb
-       re-order matrix -- done,  cpu clock=  8.04E-01 memory=    435 kb
- init: end setup matrix,  cpu clock=  8.11E-01 memory=    449 kb
- dcop: begin dcop,  cpu clock=  8.19E-01
- dcop: end dcop,  cpu clock=  8.29E-01 memory=    449 kb  tot_iter=       4
- output: d:\vlsi_homework\final\inv_test\inv_test.mt1
- sweep: tran tran0    begin, stop_t=  2.00E-07 #sweeps=**** cpu clock=  8.42E-01
- tran: time= 2.0222E-08 tot_iter=    1139 conv_iter=     419 cpu clock= 8.71E-01
- tran: time= 4.0341E-08 tot_iter=    2282 conv_iter=     839 cpu clock= 9.01E-01
- tran: time= 6.0395E-08 tot_iter=    3421 conv_iter=    1260 cpu clock= 9.28E-01
- tran: time= 8.0588E-08 tot_iter=    4540 conv_iter=    1668 cpu clock= 9.57E-01
- tran: time= 1.0032E-07 tot_iter=    5640 conv_iter=    2072 cpu clock= 9.84E-01
- tran: time= 1.2021E-07 tot_iter=    6758 conv_iter=    2481 cpu clock= 1.01E+00
- tran: time= 1.4003E-07 tot_iter=    7882 conv_iter=    2896 cpu clock= 1.04E+00
- tran: time= 1.6074E-07 tot_iter=    9066 conv_iter=    3334 cpu clock= 1.08E+00
- tran: time= 1.8029E-07 tot_iter=   10179 conv_iter=    3744 cpu clock= 1.11E+00
- tran: time= 2.0000E-07 tot_iter=   11300 conv_iter=    4154 cpu clock= 1.14E+00
- sweep: tran tran0    end,  cpu clock=  1.15E+00 memory=    451 kb
->info:         ***** hspice job concluded
- init: begin read circuit files,  cpu clock=  1.21E+00
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\XILINX\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\TLINE\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\TI\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\SIGNET\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\PCI\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\LIN_TECH\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\FET\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\DIO\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\COMLINE\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\BURR_BRN\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\BJT\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
-       option post
-       option runlvl   =     6.00
-       option gmindc   =    1.000E-14
-       option scale    =    0.900
-       option post
-       option gmindc   =    1.000E-14
-       option scale    =    0.900
-       option gmindc   =    1.000E-14
-       option scale    =    0.900
-       option gmindc   =    1.000E-14
-       option scale    =    0.900
- init: end read circuit files,  cpu clock=  1.36E+00 memory=    162 kb
- init: begin check errors,  cpu clock=  1.36E+00
- init: end check errors,  cpu clock=  1.38E+00 memory=    425 kb
- init: begin setup matrix, pivot=     0 cpu clock=  1.38E+00
-       establish matrix -- done,  cpu clock=  1.39E+00 memory=    433 kb
-       re-order matrix -- done,  cpu clock=  1.40E+00 memory=    435 kb
- init: end setup matrix,  cpu clock=  1.40E+00 memory=    449 kb
- dcop: begin dcop,  cpu clock=  1.41E+00
- dcop: end dcop,  cpu clock=  1.42E+00 memory=    449 kb  tot_iter=       4
- output: d:\vlsi_homework\final\inv_test\inv_test.mt2
- sweep: tran tran0    begin, stop_t=  2.00E-07 #sweeps=**** cpu clock=  1.43E+00
- tran: time= 2.0932E-08 tot_iter=    1076 conv_iter=     394 cpu clock= 1.45E+00
- tran: time= 4.0645E-08 tot_iter=    2128 conv_iter=     778 cpu clock= 1.48E+00
- tran: time= 6.0745E-08 tot_iter=    3165 conv_iter=    1157 cpu clock= 1.50E+00
- tran: time= 8.0624E-08 tot_iter=    4216 conv_iter=    1541 cpu clock= 1.53E+00
- tran: time= 1.0093E-07 tot_iter=    5266 conv_iter=    1924 cpu clock= 1.56E+00
- tran: time= 1.2065E-07 tot_iter=    6318 conv_iter=    2308 cpu clock= 1.59E+00
- tran: time= 1.4074E-07 tot_iter=    7355 conv_iter=    2687 cpu clock= 1.61E+00
- tran: time= 1.6062E-07 tot_iter=    8406 conv_iter=    3071 cpu clock= 1.64E+00
- tran: time= 1.8093E-07 tot_iter=    9456 conv_iter=    3454 cpu clock= 1.67E+00
- tran: time= 2.0000E-07 tot_iter=   10508 conv_iter=    3838 cpu clock= 1.69E+00
- sweep: tran tran0    end,  cpu clock=  1.70E+00 memory=    451 kb
->info:         ***** hspice job concluded
- init: begin read circuit files,  cpu clock=  1.75E+00
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\XILINX\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\TLINE\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\TI\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\SIGNET\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\PCI\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\LIN_TECH\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\FET\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\DIO\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\COMLINE\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\BURR_BRN\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\BJT\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\behave\
-       option search   = F:\synopsys\Hspice_C-2009.09\PARTS\AD\
-       option post
-       option runlvl   =     6.00
-       option gmindc   =    1.000E-14
-       option scale    =    0.900
-       option post
-       option gmindc   =    1.000E-14
-       option scale    =    0.900
-       option gmindc   =    1.000E-14
-       option scale    =    0.900
-       option gmindc   =    1.000E-14
-       option scale    =    0.900
-       option gmindc   =    1.000E-14
-       option scale    =    0.900
- init: end read circuit files,  cpu clock=  1.88E+00 memory=    164 kb
- init: begin check errors,  cpu clock=  1.88E+00
- init: end check errors,  cpu clock=  1.90E+00 memory=    427 kb
- init: begin setup matrix, pivot=     0 cpu clock=  1.90E+00
-       establish matrix -- done,  cpu clock=  1.91E+00 memory=    435 kb
-       re-order matrix -- done,  cpu clock=  1.92E+00 memory=    437 kb
- init: end setup matrix,  cpu clock=  1.92E+00 memory=    452 kb
- dcop: begin dcop,  cpu clock=  1.93E+00
- dcop: end dcop,  cpu clock=  1.94E+00 memory=    452 kb  tot_iter=       4
- output: d:\vlsi_homework\final\inv_test\inv_test.mt3
- sweep: tran tran0    begin, stop_t=  2.00E-07 #sweeps=**** cpu clock=  1.95E+00
- tran: time= 2.0444E-08 tot_iter=    1094 conv_iter=     403 cpu clock= 1.98E+00
- tran: time= 4.0724E-08 tot_iter=    2171 conv_iter=     797 cpu clock= 2.00E+00
- tran: time= 6.0444E-08 tot_iter=    3239 conv_iter=    1188 cpu clock= 2.03E+00
- tran: time= 8.0724E-08 tot_iter=    4316 conv_iter=    1582 cpu clock= 2.06E+00
- tran: time= 1.0044E-07 tot_iter=    5384 conv_iter=    1973 cpu clock= 2.08E+00
- tran: time= 1.2072E-07 tot_iter=    6461 conv_iter=    2367 cpu clock= 2.11E+00
- tran: time= 1.4044E-07 tot_iter=    7529 conv_iter=    2758 cpu clock= 2.14E+00
- tran: time= 1.6072E-07 tot_iter=    8596 conv_iter=    3149 cpu clock= 2.16E+00
- tran: time= 1.8044E-07 tot_iter=    9664 conv_iter=    3540 cpu clock= 2.19E+00
- tran: time= 2.0000E-07 tot_iter=   10741 conv_iter=    3934 cpu clock= 2.22E+00
- sweep: tran tran0    end,  cpu clock=  2.22E+00 memory=    453 kb
+ sweep: tran tran1    begin, stop_t=  2.50E-08 #sweeps=**** cpu clock=  2.67E-01
+ tran: time= 2.5108E-09 tot_iter=     210 conv_iter=      77 cpu clock= 2.77E-01
+ tran: time= 5.8955E-09 tot_iter=     230 conv_iter=      86 cpu clock= 2.82E-01
+ tran: time= 7.5136E-09 tot_iter=     440 conv_iter=     163 cpu clock= 2.90E-01
+ tran: time= 1.0345E-08 tot_iter=     480 conv_iter=     179 cpu clock= 2.96E-01
+ tran: time= 1.2511E-08 tot_iter=     672 conv_iter=     249 cpu clock= 3.06E-01
+ tran: time= 1.5890E-08 tot_iter=     692 conv_iter=     258 cpu clock= 3.13E-01
+ tran: time= 1.7514E-08 tot_iter=     903 conv_iter=     335 cpu clock= 3.22E-01
+ tran: time= 2.0324E-08 tot_iter=     943 conv_iter=     351 cpu clock= 3.26E-01
+ tran: time= 2.2512E-08 tot_iter=    1136 conv_iter=     422 cpu clock= 3.34E-01
+ tran: time= 2.5000E-08 tot_iter=    1156 conv_iter=     431 cpu clock= 3.39E-01
+ sweep: tran tran1    end,  cpu clock=  3.43E-01 memory=    459 kb
+ temperature: temperature=    0.00E+00
+ dcop: begin dcop,  cpu clock=  3.50E-01
+ dcop: end dcop,  cpu clock=  3.55E-01 memory=    459 kb  tot_iter=      12
+ output: d:\vlsi_homework\final\inv_test\inv_test.mt0
+ sweep: tran tran2    begin, stop_t=  2.50E-08 #sweeps=**** cpu clock=  3.63E-01
+ tran: time= 2.5123E-09 tot_iter=     210 conv_iter=      77 cpu clock= 3.72E-01
+ tran: time= 5.8707E-09 tot_iter=     230 conv_iter=      86 cpu clock= 3.76E-01
+ tran: time= 7.5059E-09 tot_iter=     437 conv_iter=     162 cpu clock= 3.85E-01
+ tran: time= 1.0468E-08 tot_iter=     477 conv_iter=     178 cpu clock= 3.90E-01
+ tran: time= 1.2512E-08 tot_iter=     691 conv_iter=     255 cpu clock= 4.00E-01
+ tran: time= 1.5739E-08 tot_iter=     711 conv_iter=     264 cpu clock= 4.04E-01
+ tran: time= 1.7511E-08 tot_iter=     918 conv_iter=     340 cpu clock= 4.12E-01
+ tran: time= 2.0500E-08 tot_iter=     958 conv_iter=     356 cpu clock= 4.17E-01
+ tran: time= 2.2505E-08 tot_iter=    1185 conv_iter=     438 cpu clock= 4.27E-01
+ tran: time= 2.5000E-08 tot_iter=    1205 conv_iter=     447 cpu clock= 4.32E-01
+ sweep: tran tran2    end,  cpu clock=  4.35E-01 memory=    459 kb
+ temperature: temperature=    1.00E+01
+ dcop: begin dcop,  cpu clock=  4.44E-01
+ dcop: end dcop,  cpu clock=  4.48E-01 memory=    459 kb  tot_iter=      16
+ output: d:\vlsi_homework\final\inv_test\inv_test.mt0
+ sweep: tran tran3    begin, stop_t=  2.50E-08 #sweeps=**** cpu clock=  4.56E-01
+ tran: time= 2.5136E-09 tot_iter=     208 conv_iter=      77 cpu clock= 4.64E-01
+ tran: time= 5.8613E-09 tot_iter=     228 conv_iter=      86 cpu clock= 4.69E-01
+ tran: time= 7.5116E-09 tot_iter=     439 conv_iter=     164 cpu clock= 4.78E-01
+ tran: time= 1.0255E-08 tot_iter=     479 conv_iter=     180 cpu clock= 4.83E-01
+ tran: time= 1.2515E-08 tot_iter=     684 conv_iter=     253 cpu clock= 4.92E-01
+ tran: time= 1.5618E-08 tot_iter=     704 conv_iter=     262 cpu clock= 4.97E-01
+ tran: time= 1.7512E-08 tot_iter=     922 conv_iter=     341 cpu clock= 5.06E-01
+ tran: time= 2.0218E-08 tot_iter=     962 conv_iter=     357 cpu clock= 5.11E-01
+ tran: time= 2.2515E-08 tot_iter=    1166 conv_iter=     430 cpu clock= 5.20E-01
+ tran: time= 2.5000E-08 tot_iter=    1186 conv_iter=     439 cpu clock= 5.26E-01
+ sweep: tran tran3    end,  cpu clock=  5.30E-01 memory=    459 kb
+ temperature: temperature=    2.00E+01
+ dcop: begin dcop,  cpu clock=  5.38E-01
+ dcop: end dcop,  cpu clock=  5.43E-01 memory=    459 kb  tot_iter=      20
+ output: d:\vlsi_homework\final\inv_test\inv_test.mt0
+ sweep: tran tran4    begin, stop_t=  2.50E-08 #sweeps=**** cpu clock=  5.52E-01
+ tran: time= 2.5147E-09 tot_iter=     214 conv_iter=      79 cpu clock= 5.60E-01
+ tran: time= 5.8774E-09 tot_iter=     234 conv_iter=      88 cpu clock= 5.65E-01
+ tran: time= 7.5093E-09 tot_iter=     441 conv_iter=     164 cpu clock= 5.74E-01
+ tran: time= 1.0209E-08 tot_iter=     481 conv_iter=     180 cpu clock= 5.81E-01
+ tran: time= 1.2516E-08 tot_iter=     673 conv_iter=     249 cpu clock= 5.87E-01
+ tran: time= 1.5770E-08 tot_iter=     693 conv_iter=     258 cpu clock= 5.93E-01
+ tran: time= 1.7534E-08 tot_iter=     919 conv_iter=     341 cpu clock= 6.02E-01
+ tran: time= 2.0154E-08 tot_iter=     945 conv_iter=     352 cpu clock= 6.07E-01
+ tran: time= 2.2515E-08 tot_iter=    1132 conv_iter=     419 cpu clock= 6.17E-01
+ tran: time= 2.5000E-08 tot_iter=    1152 conv_iter=     428 cpu clock= 6.22E-01
+ sweep: tran tran4    end,  cpu clock=  6.27E-01 memory=    459 kb
+ temperature: temperature=    3.00E+01
+ dcop: begin dcop,  cpu clock=  6.37E-01
+ dcop: end dcop,  cpu clock=  6.41E-01 memory=    459 kb  tot_iter=      24
+ output: d:\vlsi_homework\final\inv_test\inv_test.mt0
+ sweep: tran tran5    begin, stop_t=  2.50E-08 #sweeps=**** cpu clock=  6.51E-01
+ tran: time= 2.5159E-09 tot_iter=     219 conv_iter=      81 cpu clock= 6.59E-01
+ tran: time= 5.8744E-09 tot_iter=     239 conv_iter=      90 cpu clock= 6.63E-01
+ tran: time= 7.5336E-09 tot_iter=     455 conv_iter=     169 cpu clock= 6.69E-01
+ tran: time= 1.1025E-08 tot_iter=     483 conv_iter=     181 cpu clock= 6.73E-01
+ tran: time= 1.2517E-08 tot_iter=     675 conv_iter=     250 cpu clock= 6.81E-01
+ tran: time= 1.5817E-08 tot_iter=     695 conv_iter=     259 cpu clock= 6.86E-01
+ tran: time= 1.7533E-08 tot_iter=     913 conv_iter=     340 cpu clock= 6.93E-01
+ tran: time= 2.0076E-08 tot_iter=     939 conv_iter=     351 cpu clock= 6.98E-01
+ tran: time= 2.2517E-08 tot_iter=    1127 conv_iter=     418 cpu clock= 7.06E-01
+ tran: time= 2.5000E-08 tot_iter=    1147 conv_iter=     427 cpu clock= 7.12E-01
+ sweep: tran tran5    end,  cpu clock=  7.16E-01 memory=    460 kb
+ temperature: temperature=    4.00E+01
+ dcop: begin dcop,  cpu clock=  7.27E-01
+ dcop: end dcop,  cpu clock=  7.32E-01 memory=    460 kb  tot_iter=      28
+ output: d:\vlsi_homework\final\inv_test\inv_test.mt0
+ sweep: tran tran6    begin, stop_t=  2.50E-08 #sweeps=**** cpu clock=  7.42E-01
+ tran: time= 2.5058E-09 tot_iter=     223 conv_iter=      83 cpu clock= 7.50E-01
+ tran: time= 5.6108E-09 tot_iter=     243 conv_iter=      92 cpu clock= 7.55E-01
+ tran: time= 7.5105E-09 tot_iter=     460 conv_iter=     173 cpu clock= 7.65E-01
+ tran: time= 1.0679E-08 tot_iter=     499 conv_iter=     189 cpu clock= 7.70E-01
+ tran: time= 1.2519E-08 tot_iter=     689 conv_iter=     258 cpu clock= 7.80E-01
+ tran: time= 1.5732E-08 tot_iter=     709 conv_iter=     267 cpu clock= 7.85E-01
+ tran: time= 1.7535E-08 tot_iter=     923 conv_iter=     345 cpu clock= 7.93E-01
+ tran: time= 2.1091E-08 tot_iter=     957 conv_iter=     359 cpu clock= 7.99E-01
+ tran: time= 2.2519E-08 tot_iter=    1149 conv_iter=     428 cpu clock= 8.06E-01
+ tran: time= 2.5000E-08 tot_iter=    1169 conv_iter=     437 cpu clock= 8.10E-01
+ sweep: tran tran6    end,  cpu clock=  8.15E-01 memory=    460 kb
+ temperature: temperature=    5.00E+01
+ dcop: begin dcop,  cpu clock=  8.26E-01
+ dcop: end dcop,  cpu clock=  8.31E-01 memory=    460 kb  tot_iter=      32
+ output: d:\vlsi_homework\final\inv_test\inv_test.mt0
+ sweep: tran tran7    begin, stop_t=  2.50E-08 #sweeps=**** cpu clock=  8.39E-01
+ tran: time= 2.5083E-09 tot_iter=     213 conv_iter=      79 cpu clock= 8.47E-01
+ tran: time= 5.6179E-09 tot_iter=     233 conv_iter=      88 cpu clock= 8.51E-01
+ tran: time= 7.5328E-09 tot_iter=     436 conv_iter=     160 cpu clock= 8.60E-01
+ tran: time= 1.0967E-08 tot_iter=     470 conv_iter=     174 cpu clock= 8.66E-01
+ tran: time= 1.2520E-08 tot_iter=     660 conv_iter=     243 cpu clock= 8.74E-01
+ tran: time= 1.5674E-08 tot_iter=     680 conv_iter=     252 cpu clock= 8.81E-01
+ tran: time= 1.7535E-08 tot_iter=     898 conv_iter=     332 cpu clock= 8.89E-01
+ tran: time= 2.0935E-08 tot_iter=     932 conv_iter=     346 cpu clock= 8.93E-01
+ tran: time= 2.2520E-08 tot_iter=    1122 conv_iter=     415 cpu clock= 9.00E-01
+ tran: time= 2.5000E-08 tot_iter=    1142 conv_iter=     424 cpu clock= 9.04E-01
+ sweep: tran tran7    end,  cpu clock=  9.08E-01 memory=    460 kb
+ temperature: temperature=    6.00E+01
+ dcop: begin dcop,  cpu clock=  9.16E-01
+ dcop: end dcop,  cpu clock=  9.20E-01 memory=    460 kb  tot_iter=      36
+ output: d:\vlsi_homework\final\inv_test\inv_test.mt0
+ sweep: tran tran8    begin, stop_t=  2.50E-08 #sweeps=**** cpu clock=  9.28E-01
+ tran: time= 2.5219E-09 tot_iter=     212 conv_iter=      79 cpu clock= 9.36E-01
+ tran: time= 5.7055E-09 tot_iter=     232 conv_iter=      88 cpu clock= 9.40E-01
+ tran: time= 7.5387E-09 tot_iter=     413 conv_iter=     155 cpu clock= 9.48E-01
+ tran: time= 1.0429E-08 tot_iter=     447 conv_iter=     169 cpu clock= 9.53E-01
+ tran: time= 1.2524E-08 tot_iter=     640 conv_iter=     238 cpu clock= 9.61E-01
+ tran: time= 1.5828E-08 tot_iter=     660 conv_iter=     247 cpu clock= 9.65E-01
+ tran: time= 1.7551E-08 tot_iter=     866 conv_iter=     323 cpu clock= 9.74E-01
+ tran: time= 2.0923E-08 tot_iter=     900 conv_iter=     337 cpu clock= 9.81E-01
+ tran: time= 2.2522E-08 tot_iter=    1091 conv_iter=     406 cpu clock= 9.89E-01
+ tran: time= 2.5000E-08 tot_iter=    1111 conv_iter=     415 cpu clock= 9.94E-01
+ sweep: tran tran8    end,  cpu clock=  9.99E-01 memory=    460 kb
+ temperature: temperature=    7.00E+01
+ dcop: begin dcop,  cpu clock=  1.01E+00
+ dcop: end dcop,  cpu clock=  1.01E+00 memory=    460 kb  tot_iter=      40
+ output: d:\vlsi_homework\final\inv_test\inv_test.mt0
+ sweep: tran tran9    begin, stop_t=  2.50E-08 #sweeps=**** cpu clock=  1.02E+00
+ tran: time= 2.5257E-09 tot_iter=     219 conv_iter=      81 cpu clock= 1.03E+00
+ tran: time= 5.7927E-09 tot_iter=     239 conv_iter=      90 cpu clock= 1.04E+00
+ tran: time= 7.5546E-09 tot_iter=     427 conv_iter=     159 cpu clock= 1.05E+00
+ tran: time= 1.0893E-08 tot_iter=     461 conv_iter=     173 cpu clock= 1.05E+00
+ tran: time= 1.2529E-08 tot_iter=     641 conv_iter=     238 cpu clock= 1.06E+00
+ tran: time= 1.5833E-08 tot_iter=     661 conv_iter=     247 cpu clock= 1.06E+00
+ tran: time= 1.7525E-08 tot_iter=     843 conv_iter=     314 cpu clock= 1.08E+00
+ tran: time= 2.0941E-08 tot_iter=     877 conv_iter=     328 cpu clock= 1.08E+00
+ tran: time= 2.2529E-08 tot_iter=    1057 conv_iter=     393 cpu clock= 1.09E+00
+ tran: time= 2.5000E-08 tot_iter=    1077 conv_iter=     402 cpu clock= 1.09E+00
+ sweep: tran tran9    end,  cpu clock=  1.10E+00 memory=    460 kb
+ temperature: temperature=    8.00E+01
+ dcop: begin dcop,  cpu clock=  1.11E+00
+ dcop: end dcop,  cpu clock=  1.11E+00 memory=    460 kb  tot_iter=      44
+ output: d:\vlsi_homework\final\inv_test\inv_test.mt0
+ sweep: tran tran10   begin, stop_t=  2.50E-08 #sweeps=**** cpu clock=  1.12E+00
+ tran: time= 2.5265E-09 tot_iter=     217 conv_iter=      81 cpu clock= 1.13E+00
+ tran: time= 5.7227E-09 tot_iter=     237 conv_iter=      90 cpu clock= 1.13E+00
+ tran: time= 7.5332E-09 tot_iter=     438 conv_iter=     164 cpu clock= 1.14E+00
+ tran: time= 1.1076E-08 tot_iter=     472 conv_iter=     178 cpu clock= 1.14E+00
+ tran: time= 1.2525E-08 tot_iter=     658 conv_iter=     245 cpu clock= 1.15E+00
+ tran: time= 1.5557E-08 tot_iter=     678 conv_iter=     254 cpu clock= 1.16E+00
+ tran: time= 1.7532E-08 tot_iter=     897 conv_iter=     334 cpu clock= 1.17E+00
+ tran: time= 2.1124E-08 tot_iter=     931 conv_iter=     348 cpu clock= 1.17E+00
+ tran: time= 2.2525E-08 tot_iter=    1122 conv_iter=     417 cpu clock= 1.18E+00
+ tran: time= 2.5000E-08 tot_iter=    1142 conv_iter=     426 cpu clock= 1.18E+00
+ sweep: tran tran10   end,  cpu clock=  1.19E+00 memory=    461 kb
+ temperature: temperature=    9.00E+01
+ dcop: begin dcop,  cpu clock=  1.20E+00
+ dcop: end dcop,  cpu clock=  1.20E+00 memory=    461 kb  tot_iter=      48
+ output: d:\vlsi_homework\final\inv_test\inv_test.mt0
+ sweep: tran tran11   begin, stop_t=  2.50E-08 #sweeps=**** cpu clock=  1.21E+00
+ tran: time= 2.5271E-09 tot_iter=     217 conv_iter=      81 cpu clock= 1.22E+00
+ tran: time= 5.6476E-09 tot_iter=     237 conv_iter=      90 cpu clock= 1.22E+00
+ tran: time= 7.5204E-09 tot_iter=     420 conv_iter=     158 cpu clock= 1.23E+00
+ tran: time= 1.0809E-08 tot_iter=     459 conv_iter=     174 cpu clock= 1.24E+00
+ tran: time= 1.2529E-08 tot_iter=     651 conv_iter=     243 cpu clock= 1.25E+00
+ tran: time= 1.5639E-08 tot_iter=     671 conv_iter=     252 cpu clock= 1.25E+00
+ tran: time= 1.7534E-08 tot_iter=     849 conv_iter=     319 cpu clock= 1.26E+00
+ tran: time= 2.0373E-08 tot_iter=     883 conv_iter=     333 cpu clock= 1.26E+00
+ tran: time= 2.2527E-08 tot_iter=    1087 conv_iter=     406 cpu clock= 1.27E+00
+ tran: time= 2.5000E-08 tot_iter=    1107 conv_iter=     415 cpu clock= 1.28E+00
+ sweep: tran tran11   end,  cpu clock=  1.28E+00 memory=    461 kb
+ temperature: temperature=    1.00E+02
+ dcop: begin dcop,  cpu clock=  1.29E+00
+ dcop: end dcop,  cpu clock=  1.29E+00 memory=    461 kb  tot_iter=      52
+ output: d:\vlsi_homework\final\inv_test\inv_test.mt0
+ sweep: tran tran12   begin, stop_t=  2.50E-08 #sweeps=**** cpu clock=  1.30E+00
+ tran: time= 2.5274E-09 tot_iter=     218 conv_iter=      81 cpu clock= 1.31E+00
+ tran: time= 5.5856E-09 tot_iter=     238 conv_iter=      90 cpu clock= 1.32E+00
+ tran: time= 7.5290E-09 tot_iter=     430 conv_iter=     161 cpu clock= 1.32E+00
+ tran: time= 1.0810E-08 tot_iter=     464 conv_iter=     175 cpu clock= 1.33E+00
+ tran: time= 1.2530E-08 tot_iter=     656 conv_iter=     244 cpu clock= 1.34E+00
+ tran: time= 1.5574E-08 tot_iter=     676 conv_iter=     253 cpu clock= 1.34E+00
+ tran: time= 1.7519E-08 tot_iter=     866 conv_iter=     324 cpu clock= 1.35E+00
+ tran: time= 2.0657E-08 tot_iter=     906 conv_iter=     340 cpu clock= 1.36E+00
+ tran: time= 2.2529E-08 tot_iter=    1098 conv_iter=     409 cpu clock= 1.37E+00
+ tran: time= 2.5000E-08 tot_iter=    1118 conv_iter=     418 cpu clock= 1.37E+00
+ sweep: tran tran12   end,  cpu clock=  1.38E+00 memory=    461 kb
+ sweep: temperature     temperature     1 end
 >info:         ***** hspice job concluded
  lic: Release hspice token(s)
