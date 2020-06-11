@@ -1,6 +1,9 @@
-﻿# VLSI-homework
+# VLSI-homework
 
 ## 文件目录说明
+
+大作业第一题
+
 ```
 ./library/ 仿真使用的 40nm CMOS 工艺的库文件 
 ```
